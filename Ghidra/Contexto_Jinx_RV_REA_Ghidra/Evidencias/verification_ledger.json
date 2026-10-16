@@ -1,0 +1,44 @@
+{
+  "Jinx_archive": {
+    "sha256": "bb23f888367ece784e1d46e190d8ce283656f4721c413748719839ca7502f9a6",
+    "integrity": "passed",
+    "bones": 88,
+    "max_influences": 4,
+    "tested_in_game": false
+  },
+  "IoStore_metadata": {
+    "asset_metadata_packages": 492,
+    "selected_files": 588,
+    "complete_directory_index_files": 14529,
+    "decompressed_selected_blocks": 625,
+    "script_objects": 47638,
+    "native_executable_available": true,
+    "properties_deserialized": false,
+    "blueprint_bytecode_decompiled": false,
+    "runtime_observed": false
+  },
+  "question_status": {
+    "character_blueprint_identity": "answered by typed export and super index",
+    "shared_bind_pose": "answered by native rest transform comparison",
+    "active_skin_selection": "unresolved; prototype operates on the current body component and does not assume SK_BoxyRider_01 or SK_BoxyRider_03 is selected",
+    "material_reapplication": "unresolved; declared function/name candidates identified",
+    "native_game_code": "partially answered: targeted class registration, native wrappers, ragdoll and passenger-state handling",
+    "cooking": "blocked: no Unreal Editor or cooked mod assets supplied",
+    "playable_mod_test": "blocked: no local Windows game runtime",
+    "appearance_implementation": "source prepared: new mesh namespace plus local-pawn UE4SS controller; mocked contracts passed"
+  },
+  "limitations": [
+    "Imported package identities are resolved only inside the supplied character resource subset.",
+    "Serialized unversioned property values and Blueprint bytecode are not decoded.",
+    "Names and declared references do not establish selected runtime assets or executed behavior.",
+    "No actual Unreal import, cooking or RV gameplay test; prepared source is not an installable or verified mod."
+  ],
+  "native_game_code": {
+    "build": "Ride-CL-20702-6ab26b87853e185d15f6f574",
+    "sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221",
+    "targeted_functions_decoded": 65,
+    "queried_function_dossiers": 8,
+    "game_executed": false,
+    "full_default_auto_analysis": false
+  }
+}

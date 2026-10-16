@@ -1,0 +1,112 @@
+JINX PARA RV THERE YET? — CONTEXTO DE RECURSOS Y CÓDIGO NATIVO
+Fecha: 13 de octubre de 2026.
+
+RESULTADO
+Se recibió y verificó Ride-Win64-Shipping.exe de la carpeta interna del juego.
+El recurso de versión identifica Ride-CL-20702-6ab26b87853e185d15f6f574.
+SHA-256: 12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221.
+El análisis respalda un primer prototipo visual sobre el pawn existente.
+Todavía no se dispone de un mod cocinado, instalado o probado en una partida.
+
+ALCANCE Y HERRAMIENTAS
+REA 6.4.0 inspeccionó los archivos y los recursos PE. Ghidra 12.1.4 importó
+el ejecutable como PE x86-64 con convención Windows. Se seleccionaron y
+prepararon 65 funciones mediante datos PE, candidatos de reflexión y llamadas
+relevantes; se consultaron ocho dossiers nativos con el puente Java publicado
+de REA, conservando pseudocódigo, ensamblador y datos de referencias.
+El arranque MCP tuvo una incompatibilidad con procps en este entorno. Se usó
+el arranque directo de Ghidra y el puente autenticado de REA sin modificarlo.
+No se ejecutó Ride-Win64-Shipping.exe ni se cambiaron sus bytes.
+
+Se utilizó importación con -noanalysis y desensamblado explícito de funciones.
+Esto NO es el análisis automático completo de Ghidra sobre todo el juego.
+El indicador analysis_complete del puente significa que no hubo timeout;
+no convierte esta modalidad en un análisis completo del programa.
+Los tipos C++, nombres de candidatos y destinos virtuales no resueltos
+mantienen sus límites. El decompilador puede seguir helpers compartidos de
+una cola de salto más allá del pequeño cuerpo del wrapper observado.
+
+OBSERVACIONES VERIFICADAS
+1. El Blueprint /Game/Ride/Character/Blueprints/BP_FirstPersonCharacter
+   declara BP_FirstPersonCharacter_C con super /Script/Ride.RGFirstPersonCharacter.
+   Son índices tipados de exportación; no una deducción por el nombre del archivo.
+2. La fábrica nativa 0x1456c2250 referencia la cadena RGFirstPersonCharacter
+   en 0x148f202d0 y la función de registro 0x1456c8690.
+3. El registro recorre ocho pares nombre/función desde 0x148f20250:
+   GetCurrentDamageTaken       0x1456c8db0
+   GetRagdollTransform         0x1456c95e0
+   IsDebugInteractObjectEnabled 0x1456c9ea0
+   IsRagdolling                0x1456c9ed0
+   OnRep_ReplicatedBoneState   0x1456ca2a0
+   SetIsPlayerPassenger        0x1456ca7a0
+   SetSwimEnabled             0x1456ca830
+   TeleportPlayerTo            0x1456ca900
+4. GetRagdollTransform copia 96 bytes de estado del personaje al resultado.
+   IsRagdolling obtiene una función reflejada y usa una llamada virtual antes
+   de devolver el booleano. OnRep_ReplicatedBoneState entrega su parámetro
+   decodificado a un handler virtual. No se han resuelto todos esos destinos.
+5. Las exportaciones tipadas del Blueprint incluyen GetSkinMaterial,
+   GetFirstPersonMesh, GetVisuals, ChangeHatMesh, OnRep_CurrentHatMesh,
+   OnRep_CurrentGlassesMesh, OnRep_IsRagdoll y ReceiveBeginPlay.
+6. Hay componentes separados de cuerpo, primera persona, brazos, ropa,
+   sombrero, gafas y objetos sostenidos. El paquete declara referencias a
+   SK_BoxyRider_03, SK_BoxyRider_FPP_01 y SK_BoxyRider_FPP_Arms_03, entre otras.
+   Una dependencia declarada no demuestra cuál selecciona la partida.
+7. Jinx tiene 88 huesos. Las poses y jerarquías de los huesos compartidos
+   coinciden con las variantes 01, 02, 03 y Arms_03 examinadas, con errores
+   máximos de 0.000734 cm y 0.00248 grados atribuibles a precisión numérica.
+   Esa comprobación no valida todavía una animación o un ragdoll ejecutados.
+
+IMPLICACIONES PARA LA IMPLEMENTACIÓN — INFERENCIAS Y DECISIONES
+Se conserva el pawn existente para mantener su lógica de interacción, vehículo
+ y estado nativo. La malla propia se importa en /Game/Mods/Jinx/SK_Jinx_RV.
+Un controlador UE4SS de prueba aplica esa malla al componente Mesh del
+personaje local. Así la implementación no necesita presumir la variante
+BoxyRider seleccionada ni sobrescribir un Blueprint del juego.
+Consulta cada medio segundo en el hilo del juego, evita acumulación de callbacks,
+difiere el cambio durante ragdoll y no vuelve a asignar una malla estable.
+Comprueba la identidad del esqueleto y conserva la referencia de física.
+El orden de materiales se genera a partir de los slots importados en Unreal,
+con índices desde cero para GetMaterial y SetMaterial. Una lista explícita
+trata ropa del cuerpo, sombrero y gafas, sin propagar visibilidad a hijos.
+Los brazos y componentes FPP requieren una adaptación posterior.
+No se usan los offsets o direcciones nativos para modificar memoria del juego.
+
+QUÉ SIGUE SIN RESOLVERSE
+• Valores de propiedades sin versión y bytecode del Blueprint.
+• Selección de skin realmente ejecutada y flujo exacto de materiales dinámicos.
+• Identidad cargada del esqueleto en una partida y conservación de la animación.
+• Importación y cocinado real con Unreal; conversión y validación IoStore.
+• Pruebas de caminar, saltar, conducir, interacción, ragdoll, respawn y mapa.
+• Brazos de Jinx en primera persona, boca, efectos de quemado y multijugador.
+• Parche exacto del motor: no se recuperó del recurso de versión ni de los
+  candidatos de cadena examinados. UE 5.6 se mantiene como objetivo del
+  proyecto preparado con los recursos previamente recibidos.
+
+EVIDENCIAS Y PRUEBAS
+Evidencias/native_character_findings.json resume las observaciones nativas.
+Evidencias/ghidra_012...019 contienen los dossiers originales de consultas
+exitosas. Pseudocodigo_Nativo permite leer sus funciones con facilidad.
+Evidencias/native_version_identity.json conserva la identidad de versión.
+REA PE Evidence ID:
+ev_a432c0c93474a5a47211b44b8d0cf76a02449f83ed4483445aff244ac7b42a67.
+Los dossiers del puente directo no llevan Evidence ID del ledger MCP; se
+identifican por archivo, perfil, dirección y SHA-256 del ejecutable.
+Las evidencias de los ZIP analizados previamente mantienen sus IDs originales.
+
+Se conservaron 492 metadatos de paquetes del subconjunto recibido y un índice
+de directorio completo de 14.529 archivos. Se resolvieron nombres de
+47.638 objetos script y se descomprimieron 625 bloques seleccionados.
+No se afirma que esos metadatos sean todos los recursos o todo el código.
+
+Las pruebas del controlador usan objetos Lua simulados: cola de callbacks,
+recursos ausentes, ragdoll, jugador local, física, visibilidad FPP, estado
+estable, material sobrescrito, conducción, malla sobrescrita, esqueleto
+incompatible y pawn destruido. Pasaron; no equivalen a ejecutar UE4SS o RV.
+La selección de recursos cocinados se probó con archivos sintéticos.
+La integridad de los fuentes y la sintaxis Python pasaron.
+
+SIGUIENTE ACCIÓN CONCRETA
+El proyecto actualizado incluye LEEME.txt y PREPARAR_JINX.cmd para producir
+Resultado/Cocinados_Jinx_RV.zip con Unreal Engine 5.6.x en Windows.
+Después se necesita el empaquetado final y una prueba dentro del juego.

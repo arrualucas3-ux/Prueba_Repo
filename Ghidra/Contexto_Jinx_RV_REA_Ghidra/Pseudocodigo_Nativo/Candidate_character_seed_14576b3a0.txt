@@ -1,0 +1,49 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x14576b3a0
+Alcance: funcion explicita; no analisis completo del programa
+
+
+void Candidate_character_seed_14576b3a0(longlong *param_1,undefined1 param_2)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  
+  lVar1 = (**(code **)(*param_1 + 0x748))();
+  if (lVar1 != 0) {
+    lVar2 = FUN_1456bd3c0();
+    if ((*(int *)(lVar2 + 0x38) <= *(int *)(*(longlong *)(lVar1 + 0x10) + 0x38)) &&
+       (*(longlong *)
+         (*(longlong *)(*(longlong *)(lVar1 + 0x10) + 0x30) + (longlong)*(int *)(lVar2 + 0x38) * 8)
+        == lVar2 + 0x30)) {
+      *(undefined1 *)(lVar1 + 0x1059) = param_2;
+    }
+  }
+  return;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x14576b3a0: MOV qword ptr [RSP + 0x8], RBX
+0x14576b3a5: PUSH RDI
+0x14576b3a6: SUB RSP, 0x20
+0x14576b3aa: MOV RAX, qword ptr [RCX]
+0x14576b3ad: MOVZX EDI, DL
+0x14576b3b0: CALL qword ptr [RAX + 0x748]
+0x14576b3b6: MOV RBX, RAX
+0x14576b3b9: TEST RAX, RAX
+0x14576b3bc: JZ 0x14576b3e5
+0x14576b3be: CALL 0x1456bd3c0
+0x14576b3c3: MOV RCX, qword ptr [RBX + 0x10]
+0x14576b3c7: ADD RAX, 0x30
+0x14576b3cb: MOVSXD RDX, dword ptr [RAX + 0x8]
+0x14576b3cf: CMP EDX, dword ptr [RCX + 0x38]
+0x14576b3d2: JG 0x14576b3e5
+0x14576b3d4: MOV RCX, qword ptr [RCX + 0x30]
+0x14576b3d8: CMP qword ptr [RCX + RDX*0x8], RAX
+0x14576b3dc: JNZ 0x14576b3e5
+0x14576b3de: MOV byte ptr [RBX + 0x1059], DIL
+0x14576b3e5: MOV RBX, qword ptr [RSP + 0x30]
+0x14576b3ea: ADD RSP, 0x20
+0x14576b3ee: POP RDI
+0x14576b3ef: RET

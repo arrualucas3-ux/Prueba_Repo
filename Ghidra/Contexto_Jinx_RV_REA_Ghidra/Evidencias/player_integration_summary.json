@@ -1,0 +1,574 @@
+{
+  "path": "/Game/Ride/Character/Blueprints/BP_FirstPersonCharacter",
+  "package_sha256": "dd3e2008195b08f9a9a00863ae3436959a1b70276411800bdd38690da828e3c7",
+  "declared_exports": [
+    {
+      "name": "BP_FirstPersonCharacter_C",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.BlueprintGeneratedClass",
+        "index": "0x6b62d0815847a520"
+      },
+      "outer": null,
+      "super": {
+        "kind": "script",
+        "name": "/Script/Ride.RGFirstPersonCharacter",
+        "index": "0x7b8d1213fcf471d9"
+      },
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__BlueprintGeneratedClass",
+        "index": "0x77157a8ba3de9fb7"
+      },
+      "public_export_hash": "0x71db2ecd31fc1662",
+      "serial_size": 14002
+    },
+    {
+      "name": "ChangeHatMesh",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0x65f9f675d43cfea2",
+      "serial_size": 307
+    },
+    {
+      "name": "GetFirstPersonMesh",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0x2c243a4714ca019c",
+      "serial_size": 127
+    },
+    {
+      "name": "GetSkinMaterial",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0xbe9da3a5a0a2b846",
+      "serial_size": 593
+    },
+    {
+      "name": "GetVisuals",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0xdd48404bd5bc06f0",
+      "serial_size": 181
+    },
+    {
+      "name": "OnRep_CurrentGlassesMesh",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0xc342b46f71f4fdaf",
+      "serial_size": 177
+    },
+    {
+      "name": "OnRep_CurrentHatMesh",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0x2b3b5a5fa05c88a8",
+      "serial_size": 177
+    },
+    {
+      "name": "OnRep_IsRagdoll",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0xe6280334b022fd73",
+      "serial_size": 190
+    },
+    {
+      "name": "ReceiveBeginPlay",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": {
+        "kind": "script",
+        "name": "/Script/Engine.Actor.ReceiveBeginPlay",
+        "index": "0x668f85182d4b27ee"
+      },
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0x90987fd1731b59c3",
+      "serial_size": 52
+    },
+    {
+      "name": "ServerChangeHatMesh",
+      "class": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Function",
+        "index": "0x574f27aec05072d0"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/CoreUObject.Default__Function",
+        "index": "0x7cf65d61de5548f3"
+      },
+      "public_export_hash": "0xff1c00b35bdc5216",
+      "serial_size": 309
+    },
+    {
+      "name": "FirstPersonMesh_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0x31547289f00be5a6",
+      "serial_size": 100
+    },
+    {
+      "name": "Lighter_TPP_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0x57e095ee8293f74c",
+      "serial_size": 56
+    },
+    {
+      "name": "LowerBodyClothes_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0xd520a509e4307883",
+      "serial_size": 33
+    },
+    {
+      "name": "SK_BoxyRider_FPP_Arms_01_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0x6b81022653af6263",
+      "serial_size": 112
+    },
+    {
+      "name": "SK_Cigg_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0x9872a02a7fc759d5",
+      "serial_size": 80
+    },
+    {
+      "name": "UpperBodyClothes_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0xec1f6b6220f4d5fc",
+      "serial_size": 33
+    },
+    {
+      "name": "UpperBodyClothesFPP_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__SkeletalMeshComponent",
+        "index": "0x5b792971707da2b0"
+      },
+      "public_export_hash": "0x83ff229a6fd664db",
+      "serial_size": 33
+    },
+    {
+      "name": "CharacterMesh0",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.SkeletalMeshComponent",
+        "index": "0x6923db7d147556bb"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 3
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Ride.Default__RGFirstPersonCharacter.CharacterMesh0",
+        "index": "0x712aa2f041b4f79a"
+      },
+      "public_export_hash": "0x38ce3b025f993702",
+      "serial_size": 110
+    },
+    {
+      "name": "Cigg_TPP_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.StaticMeshComponent",
+        "index": "0x57defc7857c66b65"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__StaticMeshComponent",
+        "index": "0x7b378a29dc8706d5"
+      },
+      "public_export_hash": "0x71f5c240fec1cd54",
+      "serial_size": 141
+    },
+    {
+      "name": "Epipen_FPP_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.StaticMeshComponent",
+        "index": "0x57defc7857c66b65"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__StaticMeshComponent",
+        "index": "0x7b378a29dc8706d5"
+      },
+      "public_export_hash": "0xc22ad16ea2d457ae",
+      "serial_size": 107
+    },
+    {
+      "name": "Epipen_TPP_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.StaticMeshComponent",
+        "index": "0x57defc7857c66b65"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__StaticMeshComponent",
+        "index": "0x7b378a29dc8706d5"
+      },
+      "public_export_hash": "0x8f604887eb56531a",
+      "serial_size": 104
+    },
+    {
+      "name": "SM_Glasses_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.StaticMeshComponent",
+        "index": "0x57defc7857c66b65"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__StaticMeshComponent",
+        "index": "0x7b378a29dc8706d5"
+      },
+      "public_export_hash": "0xf20175b99820513a",
+      "serial_size": 81
+    },
+    {
+      "name": "SM_Hat01_GEN_VARIABLE",
+      "class": {
+        "kind": "script",
+        "name": "/Script/Engine.StaticMeshComponent",
+        "index": "0x57defc7857c66b65"
+      },
+      "outer": {
+        "kind": "export",
+        "index": 2
+      },
+      "super": null,
+      "template": {
+        "kind": "script",
+        "name": "/Script/Engine.Default__StaticMeshComponent",
+        "index": "0x7b378a29dc8706d5"
+      },
+      "public_export_hash": "0x8e809cefcfbc6184",
+      "serial_size": 81
+    }
+  ],
+  "declared_mesh_imports": [
+    {
+      "kind": "package",
+      "package_id": "0xab1d50e36a37788b",
+      "package": "/Game/Ride/Character/Mesh/BPA_lowerBodyClothes",
+      "public_export_hash": "0x031193c6d2989321",
+      "export_name": "BPA_lowerBodyClothes_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x6e3ad89536908be3",
+      "package": "/Game/Ride/Character/Mesh/BPA_UpperBodyClothes",
+      "public_export_hash": "0x1246b5feeb8a1727",
+      "export_name": "BPA_UpperBodyClothes_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x704bb5b00b7457ef",
+      "package": "/Game/Ride/Character/Mesh/BPA_UpperBodyClothesFPP",
+      "public_export_hash": "0x0dbb47c77e7ec2ad",
+      "export_name": "BPA_UpperBodyClothesFPP_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0xab1d50e36a37788b",
+      "package": "/Game/Ride/Character/Mesh/BPA_lowerBodyClothes",
+      "public_export_hash": "0x8d81af006fe5e280",
+      "export_name": "Default__BPA_lowerBodyClothes_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x6e3ad89536908be3",
+      "package": "/Game/Ride/Character/Mesh/BPA_UpperBodyClothes",
+      "public_export_hash": "0x51981e2a5e92bac6",
+      "export_name": "Default__BPA_UpperBodyClothes_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x704bb5b00b7457ef",
+      "package": "/Game/Ride/Character/Mesh/BPA_UpperBodyClothesFPP",
+      "public_export_hash": "0x5df076dbaec78d97",
+      "export_name": "Default__BPA_UpperBodyClothesFPP_C"
+    },
+    {
+      "kind": "package",
+      "package_id": "0xe820b64b8c24ae36",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRider_03",
+      "public_export_hash": "0xf7799a1d3aad716f",
+      "export_name": "SK_BoxyRider_03"
+    },
+    {
+      "kind": "package",
+      "package_id": "0xb39e0523a10cc37f",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRider_FPP_01",
+      "public_export_hash": "0x48ee6f671b90b4d4",
+      "export_name": "SK_BoxyRider_FPP_01"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x6978f1d1ebae40ea",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRider_FPP_Arms_03",
+      "public_export_hash": "0x24e5e3709086d242",
+      "export_name": "SK_BoxyRider_FPP_Arms_03"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x2b0f7b17190aeaa9",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRider_LbodyClothing_01",
+      "public_export_hash": "0x0d483b0e30d14fd7",
+      "export_name": "SK_BoxyRider_LbodyClothing_01"
+    },
+    {
+      "kind": "package",
+      "package_id": "0x37d5286064c5756a",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRider_UbodyClothing_01",
+      "public_export_hash": "0x5475557de38378b6",
+      "export_name": "SK_BoxyRider_UbodyClothing_01"
+    },
+    {
+      "kind": "package",
+      "package_id": "0xa27fb52340d89523",
+      "package": "/Game/Ride/Character/Mesh/SK_BoxyRiderFPP_UbodyClothing_01",
+      "public_export_hash": "0x201fe0ff48168fe3",
+      "export_name": "SK_BoxyRiderFPP_UbodyClothing_01"
+    }
+  ],
+  "relevant_names_not_execution_proof": [
+    "CurrentGlassesMesh",
+    "CurrentHatMesh",
+    "DefaultSkin",
+    "DynamicMaterial",
+    "GlassesSocket",
+    "Hat0Socket",
+    "LevelToSkinMap",
+    "MouthMaterial",
+    "SetMaterial",
+    "UpdateMesh"
+  ],
+  "limitations": [
+    "Imported package identities are resolved only inside the supplied character resource subset.",
+    "Serialized unversioned property values and Blueprint bytecode are not decoded.",
+    "Names and declared references do not establish selected runtime assets or executed behavior."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "provider": "Ghidra 12.1.4",
+  "bridge": "REA 6.4.0 packaged Java bridge",
+  "mode": "PE import, explicit function seeds, no default whole-program auto-analysis",
+  "seeds_sha256": "8302ccc4d696fc3f3f259625c3b487c722417f2634da6cd6f48fa1944d4ceeab",
+  "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221"
+}

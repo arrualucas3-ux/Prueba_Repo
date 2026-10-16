@@ -1,0 +1,24 @@
+Fuentes consultadas para la preparación (Unreal Engine 5.6):
+https://dev.epicgames.com/documentation/en-us/unreal-engine/scripting-the-unreal-editor-using-python?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/cooking-content-in-unreal-engine?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/FbxImportUI?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/FbxSkeletalMeshImportData?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/MaterialEditingLibrary?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/SkinnedMeshComponent?application_version=5.6
+https://issues.unrealengine.com/issue/UE-325794
+https://www.unrealengine.com/download
+Herramienta prevista para empaquetar IoStore tras recibir los recursos cocinados:
+https://github.com/trumank/retoc
+
+Controlador UE4SS — fuentes primarias:
+https://docs.ue4ss.com/lua-api/global-functions/loadasset.html
+https://docs.ue4ss.com/lua-api/global-functions/staticfindobject.html
+https://docs.ue4ss.com/lua-api/global-functions/findallof.html
+https://docs.ue4ss.com/lua-api/global-functions/loopasync.html
+https://docs.ue4ss.com/lua-api/global-functions/executeingamethread.html
+https://docs.ue4ss.com/lua-api/classes/uobject.html
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/SkeletalMeshComponent?application_version=5.6
+https://dev.epicgames.com/documentation/en-us/unreal-engine/python-api/class/SceneComponent?application_version=5.6
+Patrón de mod de su autor para el juego, como antecedente externo:
+https://github.com/Camyana/RVThereYet-Mods/tree/4dbc82cb4ecfa575a46157578d697a1d6c48cd3f
+https://www.nexusmods.com/rvthereyet/mods/78

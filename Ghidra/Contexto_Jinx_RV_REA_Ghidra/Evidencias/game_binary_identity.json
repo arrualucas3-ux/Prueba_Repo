@@ -1,0 +1,9 @@
+{
+  "path": "/workspace/scratch/1a6b54b85a4e/rv_rea/native_input/Ride-Win64-Shipping.exe",
+  "bytes": 181991424,
+  "sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221",
+  "machine": "0x8664",
+  "optional_header_magic": "0x20b",
+  "sections": 9,
+  "coff_timestamp": 3090274207
+}

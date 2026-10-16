@@ -1,0 +1,152 @@
+{
+  "game_build": "Ride-CL-20702-6ab26b87853e185d15f6f574",
+  "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221",
+  "producer": "REA PE parser; Ghidra CLI; unmodified REA Java bridge",
+  "analysis_profile": {
+    "provider": "Ghidra 12.1.4",
+    "bridge": "REA 6.4.0 packaged Java bridge",
+    "mode": "PE import, explicit function seeds, no default whole-program auto-analysis",
+    "seeds_sha256": "8302ccc4d696fc3f3f259625c3b487c722417f2634da6cd6f48fa1944d4ceeab",
+    "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221"
+  },
+  "default_whole_program_auto_analysis": false,
+  "game_executed": false,
+  "seed_functions": 65,
+  "queried_function_dossiers": 8,
+  "confirmed_native_registration": {
+    "table": "0x148f20250",
+    "count": 8,
+    "registration_wrapper": "0x1456c8690",
+    "class_factory": "0x1456c2250",
+    "class_string": "0x148f202d0",
+    "functions": [
+      {
+        "name": "GetCurrentDamageTaken",
+        "registered_entry": "0x1456c8db0",
+        "registration_table_address": "0x148f20250"
+      },
+      {
+        "name": "GetRagdollTransform",
+        "registered_entry": "0x1456c95e0",
+        "registration_table_address": "0x148f20260"
+      },
+      {
+        "name": "IsDebugInteractObjectEnabled",
+        "registered_entry": "0x1456c9ea0",
+        "registration_table_address": "0x148f20270"
+      },
+      {
+        "name": "IsRagdolling",
+        "registered_entry": "0x1456c9ed0",
+        "registration_table_address": "0x148f20280"
+      },
+      {
+        "name": "OnRep_ReplicatedBoneState",
+        "registered_entry": "0x1456ca2a0",
+        "registration_table_address": "0x148f20290"
+      },
+      {
+        "name": "SetIsPlayerPassenger",
+        "registered_entry": "0x1456ca7a0",
+        "registration_table_address": "0x148f202a0"
+      },
+      {
+        "name": "SetSwimEnabled",
+        "registered_entry": "0x1456ca830",
+        "registration_table_address": "0x148f202b0"
+      },
+      {
+        "name": "TeleportPlayerTo",
+        "registered_entry": "0x1456ca900",
+        "registration_table_address": "0x148f202c0"
+      }
+    ]
+  },
+  "evidence_files": [
+    {
+      "file": "ghidra_011_ping.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_012_character_class.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_013_native_registration.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_014_ragdoll_transform.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_015_native_ragdoll.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_016_set_passenger.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_017_rep_bones.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_018_passenger_impl.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    },
+    {
+      "file": "ghidra_019_constructor_wrapper.json",
+      "scope": "PE import, explicit function seeds, no default whole-program auto-analysis"
+    }
+  ],
+  "findings": [
+    {
+      "type": "observation",
+      "claim": "Class factory references the RGFirstPersonCharacter UTF-16LE string and the native-registration wrapper.",
+      "evidence": "ghidra_012_character_class.json"
+    },
+    {
+      "type": "observation",
+      "claim": "Registration wrapper traverses eight name/function-pointer pairs starting at 0x148f20250.",
+      "evidence": "ghidra_013_native_registration.json"
+    },
+    {
+      "type": "observation",
+      "claim": "GetRagdollTransform copies a 96-byte character state into its return storage.",
+      "evidence": "ghidra_014_ragdoll_transform.json"
+    },
+    {
+      "type": "observation",
+      "claim": "IsRagdolling obtains a reflected function and dispatches it through a virtual call; its output is boolean.",
+      "evidence": "ghidra_015_native_ragdoll.json"
+    },
+    {
+      "type": "observation",
+      "claim": "OnRep_ReplicatedBoneState forwards a decoded parameter to a virtual handler.",
+      "evidence": "ghidra_017_rep_bones.json"
+    },
+    {
+      "type": "inference",
+      "claim": "Applying appearance to the existing pawn is a useful first prototype; native state, vehicle handling and ragdoll should remain with the game.",
+      "evidence": [
+        "ghidra_014_ragdoll_transform.json",
+        "ghidra_017_rep_bones.json",
+        "player_integration_summary.json"
+      ]
+    },
+    {
+      "type": "unknown",
+      "claim": "Active mesh/skin selection, executed Blueprint material flow, animation and ragdoll compatibility in game remain unobserved."
+    }
+  ],
+  "limitations": [
+    "This is targeted import and explicit disassembly, not full default Ghidra auto-analysis.",
+    "The bridge ping analysis_complete flag means no timeout occurred; it does not turn -noanalysis into whole-program analysis.",
+    "C++ types and indirect targets are inferred or unresolved. Some decompilations include shared tail-call helpers beyond the wrapper address set.",
+    "The original MCP launch failed because procps could not inspect its own process in the host namespace. Direct Ghidra CLI and the published authenticated read-only REA bridge were used successfully instead.",
+    "No Blueprint bytecode or unversioned property value decoding was performed.",
+    "No native offsets or executable patches are used by the prototype.",
+    "Engine exact patch version was not recovered from the examined version-resource payload or bounded string candidates."
+  ]
+}

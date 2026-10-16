@@ -1,0 +1,72 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456c5c20
+Alcance: funcion explicita; no analisis completo del programa
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+undefined8 * Candidate_character_seed_1456c5c20(undefined8 *param_1)
+
+{
+  undefined8 *puVar1;
+  undefined8 *puVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 uStackX_8;
+  
+  uVar3 = _DAT_14a667188;
+  puVar2 = (undefined8 *)*param_1;
+  if (puVar2 != (undefined8 *)0x0) {
+    uVar4 = FUN_1456bd3c0();
+    FUN_1414b2710(param_1,uVar3);
+    FUN_1414b0b60(param_1 + 4,uVar3,uVar4,0);
+    FUN_1455d47b0(puVar2,param_1);
+    *puVar2 = &UNK_148f1f7a8;
+    puVar2[0x55] = &UNK_148f201a0;
+    puVar2[0xca] = &UNK_148f201f8;
+    puVar1 = puVar2 + 0xcd;
+    puVar2[0xcb] = &UNK_148f20210;
+    puVar2[0xcc] = &UNK_148f20228;
+    FUN_141252680(&uStackX_8,&UNK_148f20300,1);
+    *puVar1 = 0;
+    *(undefined4 *)(puVar2 + 0xce) = 1;
+    FUN_1410793c0(8,4,1,0,puVar1,1,(longlong)puVar2 + 0x674);
+    *(undefined8 *)*puVar1 = uStackX_8;
+    puVar2[0xcf] = 0;
+    puVar2[0xd0] = 0;
+    puVar2[0xd1] = 0;
+    puVar2[0xd2] = 0;
+    puVar2[0xd3] = 0;
+    puVar2[0xd4] = 0;
+    puVar2[0xd6] = 0;
+    puVar2[0xd7] = 0;
+    puVar2[0xd8] = 0;
+    puVar2[0xd9] = 0x3ff0000000000000;
+    puVar2[0xda] = 0;
+    puVar2[0xdb] = 0;
+    puVar2[0xdc] = 0;
+    puVar2[0xdd] = 0;
+    puVar2[0xde] = 0x3ff0000000000000;
+    puVar2[0xdf] = 0x3ff0000000000000;
+    puVar2[0xe0] = 0x3ff0000000000000;
+    puVar2[0xe1] = 0;
+    puVar2[0xe2] = 0;
+    *(byte *)((longlong)puVar2 + 0x32) = *(byte *)((longlong)puVar2 + 0x32) | 2;
+    puVar2[0xe3] = 0;
+    puVar2[0xe4] = 0;
+    *(undefined1 *)((longlong)puVar2 + 0x72c) = 0;
+    puVar2[0xe2] = _DAT_14a6e6a98;
+    return puVar2;
+  }
+  return (undefined8 *)0x0;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456c5c20: MOV RAX, qword ptr [RCX]
+0x1456c5c23: TEST RAX, RAX
+0x1456c5c26: JZ 0x1456c5c33
+0x1456c5c28: MOV RDX, RCX
+0x1456c5c2b: MOV RCX, RAX
+0x1456c5c2e: JMP 0x145740560
+0x1456c5c33: RET

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "environment": "Lua 5.4 C library with fake Unreal objects",
+  "scenarios": 12,
+  "tested_in_ue4ss": false,
+  "tested_in_game": false
+}

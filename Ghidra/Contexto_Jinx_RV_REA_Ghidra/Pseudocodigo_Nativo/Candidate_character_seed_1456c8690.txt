@@ -1,0 +1,96 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456c8690
+Alcance: funcion explicita; no analisis completo del programa
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void Candidate_character_seed_1456c8690(void)
+
+{
+  longlong lVar1;
+  longlong lVar2;
+  int iVar3;
+  longlong lVar4;
+  undefined8 *puVar5;
+  ulonglong uVar6;
+  uint uVar8;
+  longlong *plVar9;
+  uint uVar10;
+  int iVar11;
+  undefined1 auStack_198 [32];
+  undefined8 auStack_178 [2];
+  undefined1 auStack_168 [256];
+  undefined1 *puStack_68;
+  undefined1 *puStack_60;
+  int iStack_58;
+  ulonglong uStack_48;
+  ulonglong uVar7;
+  
+  lVar4 = Candidate_character_seed_1456c2250();
+  uStack_48 = _DAT_14a3c6a00 ^ (ulonglong)auStack_198;
+  iVar11 = 8;
+  plVar9 = (longlong *)&UNK_148f20250;
+  do {
+    lVar1 = *plVar9;
+    lVar2 = plVar9[1];
+    puStack_68 = (undefined1 *)0x0;
+    if (lVar1 == 0) {
+      puStack_60 = (undefined1 *)0x0;
+      iStack_58 = 0;
+    }
+    else {
+      uVar6 = 0xffffffffffffffff;
+      do {
+        uVar7 = uVar6;
+        uVar6 = uVar7 + 1;
+      } while (*(char *)(lVar1 + uVar6) != '\0');
+      iStack_58 = FUN_1410cda20(0,lVar1,uVar6 & 0xffffffff);
+      uVar8 = iStack_58 + 1;
+      uVar10 = uVar8;
+      if (uVar8 < 0x81) {
+        if (puStack_68 != (undefined1 *)0x0) {
+          uVar10 = 0;
+          goto code_r0x00014135f15d;
+        }
+      }
+      else {
+code_r0x00014135f15d:
+        FUN_1410b4b80(&puStack_68,0,uVar10,2);
+      }
+      puStack_60 = auStack_168;
+      if (puStack_68 != (undefined1 *)0x0) {
+        puStack_60 = puStack_68;
+      }
+      FUN_1410c6ee0(puStack_60,uVar8,lVar1,(int)uVar7 + 2);
+    }
+    FUN_141252850(auStack_178,puStack_60,1);
+    iVar3 = *(int *)(lVar4 + 0x1f8);
+    if (iVar3 == *(int *)(lVar4 + 0x1fc)) {
+      iVar3 = FUN_141079910(0x810,(longlong *)(lVar4 + 0x1f0),lVar4 + 0x1fc);
+    }
+    *(int *)(lVar4 + 0x1f8) = iVar3 + 1;
+    puVar5 = (undefined8 *)((longlong)iVar3 * 0x10 + *(longlong *)(lVar4 + 0x1f0));
+    *puVar5 = auStack_178[0];
+    puVar5[1] = lVar2;
+    if (puStack_68 != (undefined1 *)0x0) {
+      FUN_141108750();
+    }
+    plVar9 = plVar9 + 2;
+    iVar11 = iVar11 + -1;
+    if (iVar11 == 0) {
+      FUN_147af9200(uStack_48 ^ (ulonglong)auStack_198);
+      return;
+    }
+  } while( true );
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456c8690: SUB RSP, 0x28
+0x1456c8694: CALL 0x1456c2250
+0x1456c8699: MOV R8D, 0x8
+0x1456c869f: LEA RDX, [0x148f20250]
+0x1456c86a6: MOV RCX, RAX
+0x1456c86a9: ADD RSP, 0x28
+0x1456c86ad: JMP 0x14135f0b0

@@ -1,0 +1,71 @@
+JINX PARA RV THERE YET? — PROYECTO Y CONTROLADOR DE PRUEBA
+Actualizado con el ejecutable Ride-CL-20702, 13 de octubre de 2026.
+
+EL SIGUIENTE PASO
+1. Tener Unreal Engine 5.6.x para Windows instalado desde Epic Games Launcher.
+   Descarga oficial: https://www.unrealengine.com/download
+2. Extraer TODO este ZIP y ejecutar PREPARAR_JINX.cmd.
+   Se usa el Python incluido con Unreal. La compilación de shaders puede tardar.
+3. Cuando termine, enviar al chat Resultado\Cocinados_Jinx_RV.zip.
+   Ese archivo permite continuar con el empaquetado IoStore y la prueba del mod.
+
+Si Unreal está en otra carpeta, crear Ruta_Unreal.txt junto a PREPARAR_JINX.cmd
+y escribir la ruta de Unreal sin comillas, por ejemplo: D:\Unreal\UE_5.6
+Si falla, enviar el registro de Logs que indique el mensaje.
+
+QUÉ CONTIENE
+• El FBX de Jinx, sus 12 texturas y cinco materiales.
+• Importación y comprobación de los 88 huesos y su pose de reposo.
+• Una malla nueva: /Game/Mods/Jinx/SK_Jinx_RV.
+• Referencias al esqueleto y a la física originales; los recursos provisionales
+  de esas rutas se excluyen del paquete final.
+• Un controlador Lua de prueba para UE4SS, en Prototipo_UE4SS.
+• Generación del orden real de materiales después de importar en Unreal.
+  El controlador no cambia nada mientras esa comprobación esté pendiente.
+
+CÓMO FUNCIONA EL PROTOTIPO
+Aplica Jinx al cuerpo del personaje local existente. Detecta el componente Mesh
+que ya usa el juego, por lo que no presupone qué variante BoxyRider está activa.
+Consulta cada medio segundo y cambia malla o materiales solo si difieren.
+Espera a salir de ragdoll antes de cambiar la malla y comprueba que se usa
+el mismo esqueleto. Conserva la referencia a la física del cuerpo original.
+Oculta ropa del cuerpo, gafas y sombrero cuando reconoce sus componentes.
+La lógica de movimiento, interacción y vehículo sigue a cargo del personaje
+original. La comprobación del prototipo debe confirmar ese comportamiento.
+
+INSTALACIÓN DESPUÉS DEL EMPAQUETADO
+El resultado cocinado todavía requiere convertir sus recursos a IoStore.
+El controlador requiere una instalación de UE4SS compatible con este juego.
+Una vez montados los recursos finales, su carpeta Jinx_Adaptada_RV irá en:
+Ride\Binaries\Win64\ue4ss\Mods\Jinx_Adaptada_RV
+El ZIP cocinado incluye Controlador_UE4SS con la configuración generada.
+No copiar únicamente los scripts del proyecto antes de cocinar y empaquetar.
+Para quitar el prototipo, retirar su carpeta y sus contenedores con el juego
+cerrado y volver a abrirlo. Este proyecto no instala archivos en el juego.
+
+ESTADO REAL
+Se analizó el ejecutable con Ghidra y el puente publicado de REA, además de
+los recursos del personaje. Se comprobaron los archivos, la sintaxis Python,
+la selección de recursos y la lógica Lua mediante objetos simulados.
+Todavía NO se ejecutó la importación o el cocinado en Unreal: ese editor
+no está disponible en este entorno. Tampoco se ejecutó UE4SS o el juego.
+Este ZIP es un proyecto con un prototipo; no es un mod instalable probado.
+
+PENDIENTES DE LA PRIMERA VERSIÓN
+• Adaptar los brazos y la representación de primera persona a Jinx.
+  Por ahora siguen usando los recursos originales del juego.
+• Confirmar las animaciones, postura al conducir y recuperación de ragdoll.
+• Adaptar la boca y los efectos visuales de daño/quemado a sus materiales.
+• Comprobar cosméticos, respawn y cambio de mapa dentro del juego.
+• Probar multijugador. Este controlador produce una sustitución local;
+  no envía el modelo ni una selección de personaje a otros clientes.
+• El pelo no tiene simulación física. Las proporciones y hombros requieren
+  revisión con las animaciones reales.
+
+El análisis de Blueprint identifica clases, funciones y referencias declaradas;
+no descompila aún su bytecode ni establece qué ramas ejecuta la partida.
+El análisis nativo se limitó a funciones relevantes, no al juego entero.
+
+CRÉDITOS
+Rig original: XPea. Edición del rig: Just_Adam.
+Se conserva el texto recibido en Creditos_Fuente.txt.

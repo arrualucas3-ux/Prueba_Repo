@@ -1,0 +1,54 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456c2250
+Alcance: funcion explicita; no analisis completo del programa
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+longlong Candidate_character_seed_1456c2250(void)
+
+{
+  code *apcStackX_8 [4];
+  
+  if (_DAT_14a6e3520 == 0) {
+    apcStackX_8[0] = FUN_1438ba4d0;
+    FUN_141355e60(&UNK_148f125f0,&UNK_148f202d0,&DAT_14a6e3520,Candidate_character_seed_1456c8690,
+                  0x730,0x10,0x10000004,0,&UNK_147cb3960,Candidate_character_seed_1456c5c20,
+                  &SUB_1410772e0,apcStackX_8,FUN_1455d3e10,&UNK_1412dd6c0);
+  }
+  return _DAT_14a6e3520;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456c2250: MOV R11, RSP
+0x1456c2253: SUB RSP, 0x78
+0x1456c2257: MOV RAX, qword ptr [0x14a6e3520]
+0x1456c225e: TEST RAX, RAX
+0x1456c2261: JNZ 0x1456c22f9
+0x1456c2267: LEA RAX, [0x1438ba4d0]
+0x1456c226e: MOV qword ptr [R11 + 0x8], RAX
+0x1456c2272: LEA R9, [0x1456c8690]
+0x1456c2279: LEA RAX, [0x1412dd6c0]
+0x1456c2280: MOV qword ptr [R11 + -0x10], RAX
+0x1456c2284: LEA R8, [0x14a6e3520]
+0x1456c228b: LEA RAX, [0x1455d3e10]
+0x1456c2292: MOV qword ptr [R11 + -0x18], RAX
+0x1456c2296: LEA RDX, [0x148f202d0]
+0x1456c229d: LEA RAX, [R11 + 0x8]
+0x1456c22a1: MOV qword ptr [R11 + -0x20], RAX
+0x1456c22a5: LEA RCX, [0x148f125f0]
+0x1456c22ac: LEA RAX, [0x1410772e0]
+0x1456c22b3: MOV qword ptr [R11 + -0x28], RAX
+0x1456c22b7: LEA RAX, [0x1456c5c20]
+0x1456c22be: MOV qword ptr [R11 + -0x30], RAX
+0x1456c22c2: LEA RAX, [0x147cb3960]
+0x1456c22c9: MOV qword ptr [R11 + -0x38], RAX
+0x1456c22cd: MOV qword ptr [R11 + -0x40], 0x0
+0x1456c22d5: MOV dword ptr [RSP + 0x30], 0x10000004
+0x1456c22dd: MOV dword ptr [RSP + 0x28], 0x10
+0x1456c22e5: MOV dword ptr [RSP + 0x20], 0x730
+0x1456c22ed: CALL 0x141355e60
+0x1456c22f2: MOV RAX, qword ptr [0x14a6e3520]
+0x1456c22f9: ADD RSP, 0x78
+0x1456c22fd: RET

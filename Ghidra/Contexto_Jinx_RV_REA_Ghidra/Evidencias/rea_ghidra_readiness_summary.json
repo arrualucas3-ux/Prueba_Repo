@@ -1,0 +1,78 @@
+{
+  "REA_version": "6.4.0",
+  "selected_provider": "ghidra",
+  "provider_ready": true,
+  "scope_checks": [
+    {
+      "name": "node",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "24.19.0"
+    },
+    {
+      "name": "ghidra",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/ghidra/ghidra_12.1.4_PUBLIC"
+    },
+    {
+      "name": "ghidra-platform",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "linux"
+    },
+    {
+      "name": "ghidra-architecture",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "x64"
+    },
+    {
+      "name": "ghidra-installation",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/ghidra/ghidra_12.1.4_PUBLIC/Ghidra/application.properties"
+    },
+    {
+      "name": "ghidra-version",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "12.1.4"
+    },
+    {
+      "name": "ghidra-headless",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/ghidra/ghidra_12.1.4_PUBLIC/support/analyzeHeadless"
+    },
+    {
+      "name": "ghidra-native_decompiler",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/ghidra/ghidra_12.1.4_PUBLIC/Ghidra/Features/Decompiler/os/linux_x86_64/decompile reports elf x86_64, which matches linux/x64"
+    },
+    {
+      "name": "ghidra-java",
+      "ok": true,
+      "classification": "healthy",
+      "detail": "21.0.12.1; 64-bit; JDK; /workspace/scratch/1a6b54b85a4e/rv_rea/tools/jdk/jdk-21.0.12.1+1; accepted a 64-bit full JDK 21 or newer"
+    }
+  ],
+  "game_executable_present": false,
+  "native_game_functions_analyzed": false,
+  "MCP_connection_verified": true,
+  "tools": {
+    "ghidra": {
+      "ghidra_root": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/ghidra/ghidra_12.1.4_PUBLIC",
+      "version": "Ghidra_12.1.4_build",
+      "sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+      "source": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.1.4_build/ghidra_12.1.4_PUBLIC_20260921.zip"
+    },
+    "jdk": {
+      "jdk_root": "/workspace/scratch/1a6b54b85a4e/rv_rea/tools/jdk/jdk-21.0.12.1+1",
+      "version": "21.0.12+101.0.LTS",
+      "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+      "source": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz"
+    }
+  }
+}

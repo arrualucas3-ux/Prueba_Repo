@@ -1,0 +1,50 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456c9ed0
+Alcance: funcion explicita; no analisis completo del programa
+
+
+/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */
+
+void RGFPC_exec_IsRagdolling(longlong *param_1,longlong param_2,undefined8 param_3)
+
+{
+  undefined8 uVar1;
+  char acStackX_8 [8];
+  
+  acStackX_8[0] = '\0';
+  *(ulonglong *)(param_2 + 0x20) =
+       (ulonglong)(*(longlong *)(param_2 + 0x20) != 0) + *(longlong *)(param_2 + 0x20);
+  uVar1 = FUN_1414916b0(param_1,_DAT_14a6e36f8);
+  (**(code **)(*param_1 + 0x260))(param_1,uVar1,acStackX_8);
+  *(bool *)param_3 = acStackX_8[0] != '\0';
+  return;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456c9ed0: MOV qword ptr [RSP + 0x10], RBX
+0x1456c9ed5: PUSH RDI
+0x1456c9ed6: SUB RSP, 0x20
+0x1456c9eda: MOV RAX, qword ptr [RDX + 0x20]
+0x1456c9ede: XOR R9D, R9D
+0x1456c9ee1: TEST RAX, RAX
+0x1456c9ee4: MOV byte ptr [RSP + 0x30], 0x0
+0x1456c9ee9: MOV RDI, R8
+0x1456c9eec: MOV RBX, RCX
+0x1456c9eef: SETNZ R9B
+0x1456c9ef3: ADD R9, RAX
+0x1456c9ef6: MOV qword ptr [RDX + 0x20], R9
+0x1456c9efa: MOV RDX, qword ptr [0x14a6e36f8]
+0x1456c9f01: CALL 0x1414916b0
+0x1456c9f06: MOV R9, qword ptr [RBX]
+0x1456c9f09: LEA R8, [RSP + 0x30]
+0x1456c9f0e: MOV RDX, RAX
+0x1456c9f11: MOV RCX, RBX
+0x1456c9f14: CALL qword ptr [R9 + 0x260]
+0x1456c9f1b: CMP byte ptr [RSP + 0x30], 0x0
+0x1456c9f20: MOV RBX, qword ptr [RSP + 0x38]
+0x1456c9f25: SETNZ AL
+0x1456c9f28: MOV byte ptr [RDI], AL
+0x1456c9f2a: ADD RSP, 0x20
+0x1456c9f2e: POP RDI
+0x1456c9f2f: RET

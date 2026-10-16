@@ -1,0 +1,65 @@
+{
+  "archive": "Win64(1).rar",
+  "files": [
+    {
+      "path": "Win64/D3D12/x64/D3D12Core.dll",
+      "bytes": 3334176
+    },
+    {
+      "path": "Win64/D3D12/x64/d3d12SDKLayers.dll",
+      "bytes": 5773344
+    },
+    {
+      "path": "Win64/DML/x64/DirectML.dll",
+      "bytes": 18527264
+    },
+    {
+      "path": "Win64/RedpointEOS/EOSSDK-Win64-Shipping.dll",
+      "bytes": 19256272
+    },
+    {
+      "path": "Win64/RedpointEOS/x64/xaudio2_9redist.dll",
+      "bytes": 847440
+    },
+    {
+      "path": "Win64/Ride-Win64-Shipping.exe",
+      "bytes": 181991424
+    },
+    {
+      "path": "Win64/tbb12.dll",
+      "bytes": 321024
+    },
+    {
+      "path": "Win64/tbbmalloc.dll",
+      "bytes": 107008
+    },
+    {
+      "path": "Win64/D3D12/x64",
+      "bytes": 0
+    },
+    {
+      "path": "Win64/DML/x64",
+      "bytes": 0
+    },
+    {
+      "path": "Win64/RedpointEOS/x64",
+      "bytes": 0
+    },
+    {
+      "path": "Win64/D3D12",
+      "bytes": 0
+    },
+    {
+      "path": "Win64/DML",
+      "bytes": 0
+    },
+    {
+      "path": "Win64/RedpointEOS",
+      "bytes": 0
+    },
+    {
+      "path": "Win64",
+      "bytes": 0
+    }
+  ]
+}

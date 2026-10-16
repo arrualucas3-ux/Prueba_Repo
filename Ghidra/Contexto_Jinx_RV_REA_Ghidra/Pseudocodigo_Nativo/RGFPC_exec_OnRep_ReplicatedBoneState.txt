@@ -1,0 +1,104 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456ca2a0
+Alcance: funcion explicita; no analisis completo del programa
+
+
+void RGFPC_exec_OnRep_ReplicatedBoneState(longlong *param_1,longlong param_2)
+
+{
+  longlong *plVar1;
+  longlong alStack_38 [6];
+  
+  alStack_38[0] = 0;
+  alStack_38[1] = 0;
+  alStack_38[2] = 0;
+  alStack_38[3] = 0;
+  alStack_38[4] = 0;
+  alStack_38[5] = 0;
+  *(undefined8 *)(param_2 + 0x38) = 0;
+  *(undefined8 *)(param_2 + 0x40) = 0;
+  if (*(longlong *)(param_2 + 0x20) == 0) {
+    *(undefined8 *)(param_2 + 0x88) = *(undefined8 *)(*(longlong *)(param_2 + 0x88) + 0x18);
+    func_0x000141499e40(param_2,alStack_38);
+  }
+  else {
+    func_0x000141499e10(param_2,*(undefined8 *)(param_2 + 0x18),alStack_38);
+  }
+  plVar1 = alStack_38;
+  if (*(longlong **)(param_2 + 0x38) != (longlong *)0x0) {
+    plVar1 = *(longlong **)(param_2 + 0x38);
+  }
+  *(ulonglong *)(param_2 + 0x20) =
+       (ulonglong)(*(longlong *)(param_2 + 0x20) != 0) + *(longlong *)(param_2 + 0x20);
+  (**(code **)(*param_1 + 0x9f0))(param_1,plVar1);
+  if (alStack_38[4] != 0) {
+    FUN_141108750();
+  }
+  if (alStack_38[2] != 0) {
+    FUN_141108750();
+  }
+  if (alStack_38[0] != 0) {
+    FUN_141108750();
+  }
+  return;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456ca2a0: MOV RAX, RSP
+0x1456ca2a3: MOV qword ptr [RAX + 0x8], RBX
+0x1456ca2a7: MOV qword ptr [RAX + 0x10], RSI
+0x1456ca2ab: PUSH RDI
+0x1456ca2ac: SUB RSP, 0x50
+0x1456ca2b0: XOR EBX, EBX
+0x1456ca2b2: MOV RSI, RCX
+0x1456ca2b5: MOV RDI, RDX
+0x1456ca2b8: MOV qword ptr [RAX + -0x38], RBX
+0x1456ca2bc: MOV RCX, RDX
+0x1456ca2bf: MOV qword ptr [RAX + -0x30], RBX
+0x1456ca2c3: MOV qword ptr [RAX + -0x28], RBX
+0x1456ca2c7: MOV qword ptr [RAX + -0x20], RBX
+0x1456ca2cb: MOV qword ptr [RAX + -0x18], RBX
+0x1456ca2cf: MOV qword ptr [RAX + -0x10], RBX
+0x1456ca2d3: MOV qword ptr [RDX + 0x38], RBX
+0x1456ca2d7: MOV qword ptr [RDX + 0x40], RBX
+0x1456ca2db: CMP qword ptr [RDX + 0x20], RBX
+0x1456ca2df: JZ 0x1456ca2f0
+0x1456ca2e1: MOV RDX, qword ptr [RDX + 0x18]
+0x1456ca2e5: LEA R8, [RAX + -0x38]
+0x1456ca2e9: CALL 0x141499e10
+0x1456ca2ee: JMP 0x1456ca30c
+0x1456ca2f0: MOV R8, qword ptr [RDX + 0x88]
+0x1456ca2f7: MOV RAX, qword ptr [R8 + 0x18]
+0x1456ca2fb: MOV qword ptr [RDX + 0x88], RAX
+0x1456ca302: LEA RDX, [RSP + 0x20]
+0x1456ca307: CALL 0x141499e40
+0x1456ca30c: MOV RAX, qword ptr [RDI + 0x38]
+0x1456ca310: LEA RDX, [RSP + 0x20]
+0x1456ca315: TEST RAX, RAX
+0x1456ca318: MOV RCX, RSI
+0x1456ca31b: CMOVNZ RDX, RAX
+0x1456ca31f: MOV RAX, qword ptr [RDI + 0x20]
+0x1456ca323: TEST RAX, RAX
+0x1456ca326: SETNZ BL
+0x1456ca329: ADD RBX, RAX
+0x1456ca32c: MOV qword ptr [RDI + 0x20], RBX
+0x1456ca330: MOV RAX, qword ptr [RSI]
+0x1456ca333: CALL qword ptr [RAX + 0x9f0]
+0x1456ca339: MOV RCX, qword ptr [RSP + 0x40]
+0x1456ca33e: TEST RCX, RCX
+0x1456ca341: JZ 0x1456ca348
+0x1456ca343: CALL 0x141108750
+0x1456ca348: MOV RCX, qword ptr [RSP + 0x30]
+0x1456ca34d: TEST RCX, RCX
+0x1456ca350: JZ 0x1456ca357
+0x1456ca352: CALL 0x141108750
+0x1456ca357: MOV RCX, qword ptr [RSP + 0x20]
+0x1456ca35c: TEST RCX, RCX
+0x1456ca35f: JZ 0x1456ca366
+0x1456ca361: CALL 0x141108750
+0x1456ca366: MOV RBX, qword ptr [RSP + 0x60]
+0x1456ca36b: MOV RSI, qword ptr [RSP + 0x68]
+0x1456ca370: ADD RSP, 0x50
+0x1456ca374: POP RDI
+0x1456ca375: RET

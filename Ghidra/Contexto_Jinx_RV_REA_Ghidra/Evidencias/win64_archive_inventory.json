@@ -1,0 +1,25 @@
+{
+  "archive": "Win64.rar",
+  "files": [
+    {
+      "path": "Win64/CrashReportClient.exe",
+      "bytes": 27913728,
+      "filetype": 32768
+    },
+    {
+      "path": "Win64/tbb12.dll",
+      "bytes": 321024,
+      "filetype": 32768
+    },
+    {
+      "path": "Win64/tbbmalloc.dll",
+      "bytes": 107008,
+      "filetype": 32768
+    },
+    {
+      "path": "Win64",
+      "bytes": 0,
+      "filetype": 16384
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456ca7a0
+Alcance: funcion explicita; no analisis completo del programa
+
+
+void RGFPC_exec_SetIsPlayerPassenger(undefined8 param_1,longlong param_2)
+
+{
+  int aiStackX_10 [2];
+  
+  aiStackX_10[0] = 0;
+  FUN_141462720();
+  if (*(longlong *)(param_2 + 0x20) == 0) {
+    *(undefined8 *)(param_2 + 0x88) = *(undefined8 *)(*(longlong *)(param_2 + 0x88) + 0x18);
+    func_0x000141499e40(param_2,aiStackX_10);
+  }
+  else {
+    func_0x000141499e10(param_2,*(undefined8 *)(param_2 + 0x18),aiStackX_10);
+  }
+  *(ulonglong *)(param_2 + 0x20) =
+       (ulonglong)(*(longlong *)(param_2 + 0x20) != 0) + *(longlong *)(param_2 + 0x20);
+  Candidate_character_seed_14576b3a0(param_1,aiStackX_10[0] != 0);
+  return;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456ca7a0: MOV qword ptr [RSP + 0x8], RBX
+0x1456ca7a5: MOV qword ptr [RSP + 0x18], RSI
+0x1456ca7aa: PUSH RDI
+0x1456ca7ab: SUB RSP, 0x20
+0x1456ca7af: XOR EDI, EDI
+0x1456ca7b1: MOV RBX, RDX
+0x1456ca7b4: MOV dword ptr [RSP + 0x38], EDI
+0x1456ca7b8: MOV RSI, RCX
+0x1456ca7bb: CALL 0x141462720
+0x1456ca7c0: MOV RCX, RBX
+0x1456ca7c3: CMP qword ptr [RBX + 0x20], RDI
+0x1456ca7c7: JZ 0x1456ca7d9
+0x1456ca7c9: MOV RDX, qword ptr [RBX + 0x18]
+0x1456ca7cd: LEA R8, [RSP + 0x38]
+0x1456ca7d2: CALL 0x141499e10
+0x1456ca7d7: JMP 0x1456ca7f5
+0x1456ca7d9: MOV R8, qword ptr [RBX + 0x88]
+0x1456ca7e0: LEA RDX, [RSP + 0x38]
+0x1456ca7e5: MOV RAX, qword ptr [R8 + 0x18]
+0x1456ca7e9: MOV qword ptr [RBX + 0x88], RAX
+0x1456ca7f0: CALL 0x141499e40
+0x1456ca7f5: MOV RAX, qword ptr [RBX + 0x20]
+0x1456ca7f9: MOV RCX, RSI
+0x1456ca7fc: TEST RAX, RAX
+0x1456ca7ff: SETNZ DIL
+0x1456ca803: ADD RDI, RAX
+0x1456ca806: CMP dword ptr [RSP + 0x38], 0x0
+0x1456ca80b: MOV qword ptr [RBX + 0x20], RDI
+0x1456ca80f: SETNZ DL
+0x1456ca812: CALL 0x14576b3a0
+0x1456ca817: MOV RBX, qword ptr [RSP + 0x30]
+0x1456ca81c: MOV RSI, qword ptr [RSP + 0x40]
+0x1456ca821: ADD RSP, 0x20
+0x1456ca825: POP RDI
+0x1456ca826: RET

@@ -1,0 +1,69 @@
+GHIDRA — PSEUDOCODIGO GENERADO, NO CODIGO FUENTE ORIGINAL
+Direccion: 0x1456c95e0
+Alcance: funcion explicita; no analisis completo del programa
+
+
+void RGFPC_exec_GetRagdollTransform(longlong param_1,longlong param_2,undefined8 *param_3)
+
+{
+  undefined8 uVar1;
+  undefined8 uVar2;
+  undefined8 uVar3;
+  undefined8 uVar4;
+  undefined8 uVar5;
+  undefined8 uVar6;
+  undefined8 uVar7;
+  undefined8 uVar8;
+  undefined8 uVar9;
+  undefined8 uVar10;
+  undefined8 uVar11;
+  
+  *(ulonglong *)(param_2 + 0x20) =
+       (ulonglong)(*(longlong *)(param_2 + 0x20) != 0) + *(longlong *)(param_2 + 0x20);
+  uVar1 = *(undefined8 *)(param_1 + 0x6b8);
+  uVar2 = *(undefined8 *)(param_1 + 0x6c0);
+  uVar3 = *(undefined8 *)(param_1 + 0x6c8);
+  uVar4 = *(undefined8 *)(param_1 + 0x6d0);
+  uVar5 = *(undefined8 *)(param_1 + 0x6d8);
+  uVar6 = *(undefined8 *)(param_1 + 0x6e0);
+  uVar7 = *(undefined8 *)(param_1 + 0x6e8);
+  uVar8 = *(undefined8 *)(param_1 + 0x6f0);
+  uVar9 = *(undefined8 *)(param_1 + 0x6f8);
+  uVar10 = *(undefined8 *)(param_1 + 0x700);
+  uVar11 = *(undefined8 *)(param_1 + 0x708);
+  *param_3 = *(undefined8 *)(param_1 + 0x6b0);
+  param_3[1] = uVar1;
+  param_3[2] = uVar2;
+  param_3[3] = uVar3;
+  param_3[4] = uVar4;
+  param_3[5] = uVar5;
+  param_3[6] = uVar6;
+  param_3[7] = uVar7;
+  param_3[8] = uVar8;
+  param_3[9] = uVar9;
+  param_3[10] = uVar10;
+  param_3[0xb] = uVar11;
+  return;
+}
+
+
+ENSAMBLADOR DEL CUERPO OBSERVADO
+0x1456c95e0: MOV RAX, qword ptr [RDX + 0x20]
+0x1456c95e4: XOR R9D, R9D
+0x1456c95e7: TEST RAX, RAX
+0x1456c95ea: SETNZ R9B
+0x1456c95ee: ADD R9, RAX
+0x1456c95f1: MOV qword ptr [RDX + 0x20], R9
+0x1456c95f5: MOVUPS XMM0, xmmword ptr [RCX + 0x6b0]
+0x1456c95fc: MOVUPS XMM1, xmmword ptr [RCX + 0x6c0]
+0x1456c9603: MOVUPS XMM2, xmmword ptr [RCX + 0x6d0]
+0x1456c960a: MOVUPS XMM3, xmmword ptr [RCX + 0x6e0]
+0x1456c9611: MOVUPS XMM4, xmmword ptr [RCX + 0x6f0]
+0x1456c9618: MOVUPS XMM5, xmmword ptr [RCX + 0x700]
+0x1456c961f: MOVAPS xmmword ptr [R8], XMM0
+0x1456c9623: MOVAPS xmmword ptr [R8 + 0x10], XMM1
+0x1456c9628: MOVAPS xmmword ptr [R8 + 0x20], XMM2
+0x1456c962d: MOVAPS xmmword ptr [R8 + 0x30], XMM3
+0x1456c9632: MOVAPS xmmword ptr [R8 + 0x40], XMM4
+0x1456c9637: MOVAPS xmmword ptr [R8 + 0x50], XMM5
+0x1456c963c: RET

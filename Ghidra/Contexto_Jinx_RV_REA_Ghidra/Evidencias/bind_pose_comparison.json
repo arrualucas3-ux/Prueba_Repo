@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "path": "../../../Ride/Content/Ride/Character/Mesh/SK_BoxyRider_03.uasset",
+      "native_reference_skeleton_offset": 2599,
+      "mesh_bones": 76,
+      "matched_jinx_bones": 76,
+      "extra_native_mesh_bones": [],
+      "max_translation_error_cm": 0.000734413595145065,
+      "max_rotation_error_degrees": 0.002467438334075552,
+      "within_tolerance": true
+    },
+    {
+      "path": "../../../Ride/Content/Ride/Character/Mesh/SK_BoxyRider_FPP_Arms_03.uasset",
+      "native_reference_skeleton_offset": 2749,
+      "mesh_bones": 78,
+      "matched_jinx_bones": 78,
+      "extra_native_mesh_bones": [],
+      "max_translation_error_cm": 0.0007344664056439025,
+      "max_rotation_error_degrees": 0.002467438334075552,
+      "within_tolerance": true
+    },
+    {
+      "path": "../../../Ride/Content/Ride/Character/Mesh/SK_BoxyRider_01.uasset",
+      "native_reference_skeleton_offset": 3327,
+      "mesh_bones": 76,
+      "matched_jinx_bones": 76,
+      "extra_native_mesh_bones": [],
+      "max_translation_error_cm": 0.0007344135951460039,
+      "max_rotation_error_degrees": 0.002467438334075552,
+      "within_tolerance": true
+    },
+    {
+      "path": "../../../Ride/Content/Ride/Character/Mesh/SK_BoxyRider_02.uasset",
+      "native_reference_skeleton_offset": 3184,
+      "mesh_bones": 76,
+      "matched_jinx_bones": 76,
+      "extra_native_mesh_bones": [],
+      "max_translation_error_cm": 0.0006562371674009482,
+      "max_rotation_error_degrees": 0.002477371025517058,
+      "within_tolerance": true
+    }
+  ],
+  "limitations": [
+    "This compares native bind pose data with the prepared Jinx skeleton. It does not test animation, visual proportions or runtime integration."
+  ]
+}

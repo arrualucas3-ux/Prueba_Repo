@@ -1,0 +1,15 @@
+{
+  "source_integrity": "passed",
+  "python_syntax": "passed",
+  "bone_reference_count": 88,
+  "materials": 5,
+  "png_images": 12,
+  "mesh_path": "/Game/Mods/Jinx/SK_Jinx_RV",
+  "cooked_selection_excludes_original_skeleton_physics_and_other_game_assets": "passed",
+  "controller_packaged_with_cooked_output": "passed",
+  "missing_mesh_fails": "passed",
+  "engine_mismatch_fails": "passed",
+  "executed_in_unreal": false,
+  "cooked_assets_generated": false,
+  "tested_in_game": false
+}

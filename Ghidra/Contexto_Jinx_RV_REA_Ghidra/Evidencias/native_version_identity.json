@@ -1,0 +1,16 @@
+{
+  "producer": "REA PE resource inspection plus UTF-16LE payload decoding",
+  "evidence_id": "ev_a432c0c93474a5a47211b44b8d0cf76a02449f83ed4483445aff244ac7b42a67",
+  "payload": {
+    "offset": 178964496,
+    "bytes": 928
+  },
+  "fields": {
+    "FileVersion": "Ride-CL-20702-6ab26b87853e185d15f6f574",
+    "CompanyName": "Nuggets Entertainment AB",
+    "ProductName": "Ride",
+    "ProductVersion": "Ride-CL-20702-6ab26b87853e185d15f6f574",
+    "OriginalFilename": "Ride-Win64-Shipping.exe"
+  },
+  "engine_version_candidates": []
+}

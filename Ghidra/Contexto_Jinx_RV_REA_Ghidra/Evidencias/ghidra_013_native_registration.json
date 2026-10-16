@@ -1,0 +1,6044 @@
+{
+  "analysis_profile": {
+    "provider": "Ghidra 12.1.4",
+    "bridge": "REA 6.4.0 packaged Java bridge",
+    "mode": "PE import, explicit function seeds, no default whole-program auto-analysis",
+    "seeds_sha256": "8302ccc4d696fc3f3f259625c3b487c722417f2634da6cd6f48fa1944d4ceeab",
+    "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221"
+  },
+  "bridge_result": {
+    "id": 13,
+    "ok": true,
+    "result": {
+      "value": {
+        "procedure": {
+          "address": "0x1456c8690",
+          "name": "Candidate_character_seed_1456c8690",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1456c8690",
+                "end": "0x1456c86b1"
+              }
+            ],
+            "total_bytes": 34,
+            "span_bytes": 34,
+            "non_contiguous": false,
+            "contains_entry": true
+          },
+          "signature": "undefined Candidate_character_seed_1456c8690()",
+          "locals": []
+        },
+        "pseudocode": "\n/* WARNING: Globals starting with '_' overlap smaller symbols at the same address */\n\nvoid Candidate_character_seed_1456c8690(void)\n\n{\n  longlong lVar1;\n  longlong lVar2;\n  int iVar3;\n  longlong lVar4;\n  undefined8 *puVar5;\n  ulonglong uVar6;\n  uint uVar8;\n  longlong *plVar9;\n  uint uVar10;\n  int iVar11;\n  undefined1 auStack_198 [32];\n  undefined8 auStack_178 [2];\n  undefined1 auStack_168 [256];\n  undefined1 *puStack_68;\n  undefined1 *puStack_60;\n  int iStack_58;\n  ulonglong uStack_48;\n  ulonglong uVar7;\n  \n  lVar4 = Candidate_character_seed_1456c2250();\n  uStack_48 = _DAT_14a3c6a00 ^ (ulonglong)auStack_198;\n  iVar11 = 8;\n  plVar9 = (longlong *)&UNK_148f20250;\n  do {\n    lVar1 = *plVar9;\n    lVar2 = plVar9[1];\n    puStack_68 = (undefined1 *)0x0;\n    if (lVar1 == 0) {\n      puStack_60 = (undefined1 *)0x0;\n      iStack_58 = 0;\n    }\n    else {\n      uVar6 = 0xffffffffffffffff;\n      do {\n        uVar7 = uVar6;\n        uVar6 = uVar7 + 1;\n      } while (*(char *)(lVar1 + uVar6) != '\\0');\n      iStack_58 = FUN_1410cda20(0,lVar1,uVar6 & 0xffffffff);\n      uVar8 = iStack_58 + 1;\n      uVar10 = uVar8;\n      if (uVar8 < 0x81) {\n        if (puStack_68 != (undefined1 *)0x0) {\n          uVar10 = 0;\n          goto code_r0x00014135f15d;\n        }\n      }\n      else {\ncode_r0x00014135f15d:\n        FUN_1410b4b80(&puStack_68,0,uVar10,2);\n      }\n      puStack_60 = auStack_168;\n      if (puStack_68 != (undefined1 *)0x0) {\n        puStack_60 = puStack_68;\n      }\n      FUN_1410c6ee0(puStack_60,uVar8,lVar1,(int)uVar7 + 2);\n    }\n    FUN_141252850(auStack_178,puStack_60,1);\n    iVar3 = *(int *)(lVar4 + 0x1f8);\n    if (iVar3 == *(int *)(lVar4 + 0x1fc)) {\n      iVar3 = FUN_141079910(0x810,(longlong *)(lVar4 + 0x1f0),lVar4 + 0x1fc);\n    }\n    *(int *)(lVar4 + 0x1f8) = iVar3 + 1;\n    puVar5 = (undefined8 *)((longlong)iVar3 * 0x10 + *(longlong *)(lVar4 + 0x1f0));\n    *puVar5 = auStack_178[0];\n    puVar5[1] = lVar2;\n    if (puStack_68 != (undefined1 *)0x0) {\n      FUN_141108750();\n    }\n    plVar9 = plVar9 + 2;\n    iVar11 = iVar11 + -1;\n    if (iVar11 == 0) {\n      FUN_147af9200(uStack_48 ^ (ulonglong)auStack_198);\n      return;\n    }\n  } while( true );\n}\n\n",
+        "assembly": [
+          "0x1456c8690: SUB RSP, 0x28",
+          "0x1456c8694: CALL 0x1456c2250",
+          "0x1456c8699: MOV R8D, 0x8",
+          "0x1456c869f: LEA RDX, [0x148f20250]",
+          "0x1456c86a6: MOV RCX, RAX",
+          "0x1456c86a9: ADD RSP, 0x28",
+          "0x1456c86ad: JMP 0x14135f0b0"
+        ],
+        "comments": [],
+        "callers": [],
+        "callees": [
+          {
+            "address": "0x1456c2250",
+            "name": "Candidate_character_seed_1456c2250",
+            "classification": {
+              "external": false,
+              "thunk": false,
+              "thunk_target": null,
+              "provenance": "ghidra-function-manager"
+            },
+            "body": {
+              "available": true,
+              "provenance": "ghidra-function-body-address-set",
+              "ranges": [
+                {
+                  "start": "0x1456c2250",
+                  "end": "0x1456c22fd"
+                }
+              ],
+              "total_bytes": 174,
+              "span_bytes": 174,
+              "non_contiguous": false,
+              "contains_entry": true
+            }
+          }
+        ],
+        "incoming_references": [
+          {
+            "source_address": "0x14abf64b8",
+            "target_address": "0x1456c8690",
+            "source_procedure": null,
+            "target_procedure": {
+              "address": "0x1456c8690",
+              "name": "Candidate_character_seed_1456c8690",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456c8690",
+                    "end": "0x1456c86b1"
+                  }
+                ],
+                "total_bytes": 34,
+                "span_bytes": 34,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "DATA",
+              "flow": false,
+              "call": false,
+              "jump": false,
+              "data": true,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          }
+        ],
+        "outgoing_references": [
+          {
+            "source_address": "0x1456c8694",
+            "target_address": "0x1456c2250",
+            "source_procedure": {
+              "address": "0x1456c8690",
+              "name": "Candidate_character_seed_1456c8690",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456c8690",
+                    "end": "0x1456c86b1"
+                  }
+                ],
+                "total_bytes": 34,
+                "span_bytes": 34,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456c2250",
+              "name": "Candidate_character_seed_1456c2250",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456c2250",
+                    "end": "0x1456c22fd"
+                  }
+                ],
+                "total_bytes": 174,
+                "span_bytes": 174,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456c86ad",
+            "target_address": "0x14135f0b0",
+            "source_procedure": {
+              "address": "0x1456c8690",
+              "name": "Candidate_character_seed_1456c8690",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456c8690",
+                    "end": "0x1456c86b1"
+                  }
+                ],
+                "total_bytes": 34,
+                "span_bytes": 34,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x14135f0b0",
+              "name": "FUN_14135f0b0",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x14135f0b0",
+                    "end": "0x14135f0b0"
+                  }
+                ],
+                "total_bytes": 1,
+                "span_bytes": 1,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          }
+        ],
+        "referenced_strings": [],
+        "referenced_names": [
+          {
+            "address": "0x14135f0b0",
+            "value": "FUN_14135f0b0",
+            "source_address": "0x1456c86ad"
+          },
+          {
+            "address": "0x1456c2250",
+            "value": "Candidate_character_seed_1456c2250",
+            "source_address": "0x1456c8694"
+          }
+        ],
+        "basic_blocks": [
+          {
+            "start": "0x1456c8690",
+            "end": "0x1456c86b2",
+            "successors": []
+          }
+        ],
+        "native_api": {
+          "available": true,
+          "provenance": "ghidra-high-function",
+          "signature_source": "default",
+          "calling_convention": "__fastcall",
+          "return_type": {
+            "role": "return",
+            "ordinal": null,
+            "name": null,
+            "data_type": "void",
+            "size_bytes": 0,
+            "storage": "<VOID>",
+            "confidence": "low",
+            "evidence": [
+              {
+                "kind": "signature-source",
+                "source": "ghidra-function-manager",
+                "detail": "Function signature source is default."
+              },
+              {
+                "kind": "decompiler-type",
+                "source": "ghidra-high-function",
+                "detail": "HighFunction recovered data type void."
+              }
+            ],
+            "decompiler_artifacts": [
+              "recovered-signature",
+              "register-or-stack-storage"
+            ]
+          },
+          "parameters": [],
+          "jump_tables": [],
+          "pseudocode": {
+            "classification": "decompiler-generated-non-source",
+            "compilable": false
+          },
+          "decompiler_artifacts": [
+            "recovered-signature",
+            "register-and-stack-variables",
+            "compiler-generated-control-flow",
+            "pointer-arithmetic",
+            "pseudocode"
+          ],
+          "limitations": [
+            "Types and calling conventions are Ghidra decompiler observations, not source declarations.",
+            "Register variables, compiler-generated blocks, and pointer arithmetic remain decompiler artifacts.",
+            "Pseudocode is neither original source nor guaranteed to compile."
+          ]
+        },
+        "native_value_flow": {
+          "available": true,
+          "provenance": "ghidra-high-pcode",
+          "operations": [
+            {
+              "id": "0x14135f0bf#1194",
+              "address": "0x14135f0bf",
+              "sequence": 1194,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "fffffffffffffe68"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x20",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0bf#1195",
+              "address": "0x14135f0bf",
+              "sequence": 1195,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "fffffffffffffe68"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x20",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0cd#54",
+              "address": "0x14135f0cd",
+              "sequence": 54,
+              "opcode": "INT_XOR",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000166",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0cd#1209",
+              "address": "0x14135f0cd",
+              "sequence": 1209,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000166",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0dc#767",
+              "address": "0x14135f0dc",
+              "sequence": 767,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "8"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x80",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0e3#72",
+              "address": "0x14135f0e3",
+              "sequence": 72,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "148f20250"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000016e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0e3#1210",
+              "address": "0x14135f0e3",
+              "sequence": 1210,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000016e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x30",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0f4#92",
+              "address": "0x14135f0f4",
+              "sequence": 92,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1f0"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000176",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f0f4#1211",
+              "address": "0x14135f0f4",
+              "sequence": 1211,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000176",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9000",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#97",
+              "address": "0x14135f100",
+              "sequence": 97,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x30",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#762",
+              "address": "0x14135f100",
+              "sequence": 762,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x30",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x30",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x30",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#945",
+              "address": "0x14135f100",
+              "sequence": 945,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x80",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0xb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0xb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#998",
+              "address": "0x14135f100",
+              "sequence": 998,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#1037",
+              "address": "0x14135f100",
+              "sequence": 1037,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#1063",
+              "address": "0x14135f100",
+              "sequence": 1063,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#1076",
+              "address": "0x14135f100",
+              "sequence": 1076,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f100#1089",
+              "address": "0x14135f100",
+              "sequence": 1089,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f103#100",
+              "address": "0x14135f103",
+              "sequence": 100,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f103#1196",
+              "address": "0x14135f103",
+              "sequence": 1196,
+              "opcode": "PTRADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x30",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1"
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f107#104",
+              "address": "0x14135f107",
+              "sequence": 104,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f10f#109",
+              "address": "0x14135f10f",
+              "sequence": 109,
+              "opcode": "INT_EQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f112#114",
+              "address": "0x14135f112",
+              "sequence": 114,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f1a6",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f118#115",
+              "address": "0x14135f118",
+              "sequence": 115,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffffffffffff"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x18",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f118#1204",
+              "address": "0x14135f118",
+              "sequence": 1204,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000146",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f120#117",
+              "address": "0x14135f120",
+              "sequence": 117,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x18",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f120#743",
+              "address": "0x14135f120",
+              "sequence": 743,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000146",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000014e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000156",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f120#1206",
+              "address": "0x14135f120",
+              "sequence": 1206,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000156",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x18",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f123#125",
+              "address": "0x14135f123",
+              "sequence": 125,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000017e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f123#126",
+              "address": "0x14135f123",
+              "sequence": 126,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9400",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 1,
+                "location": "unique:0x23a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f123#132",
+              "address": "0x14135f123",
+              "sequence": 132,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 1,
+                  "location": "unique:0x23a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 1,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f123#1212",
+              "address": "0x14135f123",
+              "sequence": 1212,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000017e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9400",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f127#138",
+              "address": "0x14135f127",
+              "sequence": 138,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f120",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f127#1205",
+              "address": "0x14135f127",
+              "sequence": 1205,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000014e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f129#777",
+              "address": "0x14135f129",
+              "sequence": 777,
+              "opcode": "INT_AND",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffff"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x80",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#154",
+              "address": "0x14135f131",
+              "sequence": 154,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x1410cda20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x80",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#984",
+              "address": "0x14135f131",
+              "sequence": 984,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#1027",
+              "address": "0x14135f131",
+              "sequence": 1027,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#1040",
+              "address": "0x14135f131",
+              "sequence": 1040,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#1053",
+              "address": "0x14135f131",
+              "sequence": 1053,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#1066",
+              "address": "0x14135f131",
+              "sequence": 1066,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f131#1079",
+              "address": "0x14135f131",
+              "sequence": 1079,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "9a"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f13d#158",
+              "address": "0x14135f13d",
+              "sequence": 158,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x28",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f146#172",
+              "address": "0x14135f146",
+              "sequence": 172,
+              "opcode": "INT_LESS",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x28",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "81"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 1,
+                "location": "unique:0x25400",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f146#173",
+              "address": "0x14135f146",
+              "sequence": 173,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f15a",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 1,
+                  "location": "unique:0x25400",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f146#1208",
+              "address": "0x14135f146",
+              "sequence": 1208,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x28",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 4,
+                "location": "unique:0x10000162",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f150#181",
+              "address": "0x14135f150",
+              "sequence": 181,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f153#186",
+              "address": "0x14135f153",
+              "sequence": 186,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f17a",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f155#1187",
+              "address": "0x14135f155",
+              "sequence": 1187,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x80",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f158#197",
+              "address": "0x14135f158",
+              "sequence": 197,
+              "opcode": "BRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f15d",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f158#1207",
+              "address": "0x14135f158",
+              "sequence": 1207,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x80",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 4,
+                "location": "unique:0x1000015e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f15d#1186",
+              "address": "0x14135f15d",
+              "sequence": 1186,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0x1000015e",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0x10000162",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x80",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f163#1197",
+              "address": "0x14135f163",
+              "sequence": 1197,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffffffffff98"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0xa500",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#213",
+              "address": "0x14135f16d",
+              "sequence": 213,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x1410b4b80",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0xa500",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x80",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "2"
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f16d#985",
+              "address": "0x14135f16d",
+              "sequence": 985,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#1028",
+              "address": "0x14135f16d",
+              "sequence": 1028,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#1041",
+              "address": "0x14135f16d",
+              "sequence": 1041,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#1054",
+              "address": "0x14135f16d",
+              "sequence": 1054,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#1067",
+              "address": "0x14135f16d",
+              "sequence": 1067,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f16d#1080",
+              "address": "0x14135f16d",
+              "sequence": 1080,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d5"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#221",
+              "address": "0x14135f17a",
+              "sequence": 221,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#996",
+              "address": "0x14135f17a",
+              "sequence": 996,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#1035",
+              "address": "0x14135f17a",
+              "sequence": 1035,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#1048",
+              "address": "0x14135f17a",
+              "sequence": 1048,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#1074",
+              "address": "0x14135f17a",
+              "sequence": 1074,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17a#1087",
+              "address": "0x14135f17a",
+              "sequence": 1087,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f17d#1198",
+              "address": "0x14135f17d",
+              "sequence": 1198,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "fffffffffffffe98"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9c00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f182#228",
+              "address": "0x14135f182",
+              "sequence": 228,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0x1000009f",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "2"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f182#962",
+              "address": "0x14135f182",
+              "sequence": 962,
+              "opcode": "SUBPIECE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 4,
+                "location": "unique:0x1000009f",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f189#235",
+              "address": "0x14135f189",
+              "sequence": 235,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f18d",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f189#1202",
+              "address": "0x14135f189",
+              "sequence": 1202,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9c00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000136",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f189#1203",
+              "address": "0x14135f189",
+              "sequence": 1203,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000013e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f18d#710",
+              "address": "0x14135f18d",
+              "sequence": 710,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000136",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000013e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#244",
+              "address": "0x14135f197",
+              "sequence": 244,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x1410c6ee0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x28",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x88",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f197#986",
+              "address": "0x14135f197",
+              "sequence": 986,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#1029",
+              "address": "0x14135f197",
+              "sequence": 1029,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#1042",
+              "address": "0x14135f197",
+              "sequence": 1042,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#1055",
+              "address": "0x14135f197",
+              "sequence": 1055,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#1068",
+              "address": "0x14135f197",
+              "sequence": 1068,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f197#1081",
+              "address": "0x14135f197",
+              "sequence": 1081,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "f4"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1a4#248",
+              "address": "0x14135f1a4",
+              "sequence": 248,
+              "opcode": "BRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f1b8",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1a9#444",
+              "address": "0x14135f1a9",
+              "sequence": 444,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b1#447",
+              "address": "0x14135f1b1",
+              "sequence": 447,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#995",
+              "address": "0x14135f1b8",
+              "sequence": 995,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#1034",
+              "address": "0x14135f1b8",
+              "sequence": 1034,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#1047",
+              "address": "0x14135f1b8",
+              "sequence": 1047,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#1060",
+              "address": "0x14135f1b8",
+              "sequence": 1060,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#1073",
+              "address": "0x14135f1b8",
+              "sequence": 1073,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1b8#1086",
+              "address": "0x14135f1b8",
+              "sequence": 1086,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1be#1199",
+              "address": "0x14135f1be",
+              "sequence": 1199,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "fffffffffffffe88"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9c00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#254",
+              "address": "0x14135f1c3",
+              "sequence": 254,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141252850",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9c00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1"
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1c3#987",
+              "address": "0x14135f1c3",
+              "sequence": 987,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#1030",
+              "address": "0x14135f1c3",
+              "sequence": 1030,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#1043",
+              "address": "0x14135f1c3",
+              "sequence": 1043,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#1056",
+              "address": "0x14135f1c3",
+              "sequence": 1056,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#1069",
+              "address": "0x14135f1c3",
+              "sequence": 1069,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c3#1082",
+              "address": "0x14135f1c3",
+              "sequence": 1082,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "fe"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c8#255",
+              "address": "0x14135f1c8",
+              "sequence": 255,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1f8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000186",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c8#256",
+              "address": "0x14135f1c8",
+              "sequence": 256,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 4,
+                "location": "unique:0x23c00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1c8#1213",
+              "address": "0x14135f1c8",
+              "sequence": 1213,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000186",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1cc#259",
+              "address": "0x14135f1cc",
+              "sequence": 259,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1fc"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000018e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1cc#260",
+              "address": "0x14135f1cc",
+              "sequence": 260,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 4,
+                "location": "unique:0xd300",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1cc#266",
+              "address": "0x14135f1cc",
+              "sequence": 266,
+              "opcode": "INT_EQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0x23c00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0xd300",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1cc#1214",
+              "address": "0x14135f1cc",
+              "sequence": 1214,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000018e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1d0#272",
+              "address": "0x14135f1d0",
+              "sequence": 272,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f1e3",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1d7#274",
+              "address": "0x14135f1d7",
+              "sequence": 274,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1fc"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#279",
+              "address": "0x14135f1de",
+              "sequence": 279,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141079910",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "810"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9000",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#988",
+              "address": "0x14135f1de",
+              "sequence": 988,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#1031",
+              "address": "0x14135f1de",
+              "sequence": 1031,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#1044",
+              "address": "0x14135f1de",
+              "sequence": 1044,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#1057",
+              "address": "0x14135f1de",
+              "sequence": 1057,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#1070",
+              "address": "0x14135f1de",
+              "sequence": 1070,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1de#1083",
+              "address": "0x14135f1de",
+              "sequence": 1083,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "117"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#280",
+              "address": "0x14135f1e3",
+              "sequence": 280,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#974",
+              "address": "0x14135f1e3",
+              "sequence": 974,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 4,
+                  "location": "unique:0x23c00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0x0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#999",
+              "address": "0x14135f1e3",
+              "sequence": 999,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#1038",
+              "address": "0x14135f1e3",
+              "sequence": 1038,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#1051",
+              "address": "0x14135f1e3",
+              "sequence": 1051,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#1064",
+              "address": "0x14135f1e3",
+              "sequence": 1064,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#1077",
+              "address": "0x14135f1e3",
+              "sequence": 1077,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e3#1090",
+              "address": "0x14135f1e3",
+              "sequence": 1090,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e6#283",
+              "address": "0x14135f1e6",
+              "sequence": 283,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1f8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000196",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e6#285",
+              "address": "0x14135f1e6",
+              "sequence": 285,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1e6#992",
+              "address": "0x14135f1e6",
+              "sequence": 992,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "11d"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1e6#1215",
+              "address": "0x14135f1e6",
+              "sequence": 1215,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000196",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1ea#286",
+              "address": "0x14135f1ea",
+              "sequence": 286,
+              "opcode": "INT_SEXT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0x0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1f2#292",
+              "address": "0x14135f1f2",
+              "sequence": 292,
+              "opcode": "INT_MULT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "10"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1f6#335",
+              "address": "0x14135f1f6",
+              "sequence": 335,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9000",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1f6#336",
+              "address": "0x14135f1f6",
+              "sequence": 336,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x1000019e",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1f6#1216",
+              "address": "0x14135f1f6",
+              "sequence": 1216,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x1000019e",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1f9#344",
+              "address": "0x14135f1f9",
+              "sequence": 344,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1f9#993",
+              "address": "0x14135f1f9",
+              "sequence": 993,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "158"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1fc#347",
+              "address": "0x14135f1fc",
+              "sequence": 347,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f1fc#994",
+              "address": "0x14135f1fc",
+              "sequence": 994,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "15b"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f1fc#1200",
+              "address": "0x14135f1fc",
+              "sequence": 1200,
+              "opcode": "PTRADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "1"
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f208#355",
+              "address": "0x14135f208",
+              "sequence": 355,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20b#360",
+              "address": "0x14135f20b",
+              "sequence": 360,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f212",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f20d#363",
+              "address": "0x14135f20d",
+              "sequence": 363,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141108750",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f20d#989",
+              "address": "0x14135f20d",
+              "sequence": 989,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20d#1032",
+              "address": "0x14135f20d",
+              "sequence": 1032,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20d#1045",
+              "address": "0x14135f20d",
+              "sequence": 1045,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20d#1058",
+              "address": "0x14135f20d",
+              "sequence": 1058,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20d#1071",
+              "address": "0x14135f20d",
+              "sequence": 1071,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f20d#1084",
+              "address": "0x14135f20d",
+              "sequence": 1084,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "16b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#997",
+              "address": "0x14135f212",
+              "sequence": 997,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1036",
+              "address": "0x14135f212",
+              "sequence": 1036,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1049",
+              "address": "0x14135f212",
+              "sequence": 1049,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1062",
+              "address": "0x14135f212",
+              "sequence": 1062,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1075",
+              "address": "0x14135f212",
+              "sequence": 1075,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1088",
+              "address": "0x14135f212",
+              "sequence": 1088,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f212#1201",
+              "address": "0x14135f212",
+              "sequence": 1201,
+              "opcode": "PTRADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x30",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "2"
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "8"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x30",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f21b#376",
+              "address": "0x14135f21b",
+              "sequence": 376,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0xb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "ffffffff"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 4,
+                "location": "register:0xb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f21b#379",
+              "address": "0x14135f21b",
+              "sequence": 379,
+              "opcode": "INT_EQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 4,
+                  "location": "register:0xb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f21f#385",
+              "address": "0x14135f21f",
+              "sequence": 385,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x14135f100",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f25d#409",
+              "address": "0x14135f25d",
+              "sequence": 409,
+              "opcode": "INT_XOR",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100001a6",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f25d#1217",
+              "address": "0x14135f25d",
+              "sequence": 1217,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100001a6",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f260#418",
+              "address": "0x14135f260",
+              "sequence": 418,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x147af9200",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f260#990",
+              "address": "0x14135f260",
+              "sequence": 990,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1a2"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f260#1046",
+              "address": "0x14135f260",
+              "sequence": 1046,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffff98",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1a2"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffff98",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f260#1059",
+              "address": "0x14135f260",
+              "sequence": 1059,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1a2"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f260#1072",
+              "address": "0x14135f260",
+              "sequence": 1072,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1a2"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f260#1085",
+              "address": "0x14135f260",
+              "sequence": 1085,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffb8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1a2"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffb8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x14135f26f#438",
+              "address": "0x14135f26f",
+              "sequence": 438,
+              "opcode": "RETURN",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x14135f26f#991",
+              "address": "0x14135f26f",
+              "sequence": 991,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456c8694#11",
+              "address": "0x1456c8694",
+              "sequence": 11,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x1456c2250",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456c8694#983",
+              "address": "0x1456c8694",
+              "sequence": 983,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x14a3c6a00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b"
+                }
+              ],
+              "output": {
+                "kind": "address",
+                "size_bytes": 8,
+                "location": "0x14a3c6a00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456c8694#1026",
+              "address": "0x1456c8694",
+              "sequence": 1026,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffe88",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffe88",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456c8694#1052",
+              "address": "0x1456c8694",
+              "sequence": 1052,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffa0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffa0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456c8694#1065",
+              "address": "0x1456c8694",
+              "sequence": 1065,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 4,
+                  "location": "stack:0xffffffffffffffa8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 4,
+                "location": "stack:0xffffffffffffffa8",
+                "constant_hex": null
+              }
+            }
+          ],
+          "def_use": [
+            {
+              "definition": "0x1456c8694#983",
+              "use": "0x14135f0cd#54",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f0cd#1209",
+              "use": "0x14135f0cd#54",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f0bf#1194",
+              "use": "0x14135f0cd#1209",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f0e3#72",
+              "use": "0x14135f0e3#1210",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456c8694#11",
+              "use": "0x14135f0f4#92",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f0f4#92",
+              "use": "0x14135f0f4#1211",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#762",
+              "use": "0x14135f100#97",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f0e3#1210",
+              "use": "0x14135f100#762",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1201",
+              "use": "0x14135f100#762",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f0dc#767",
+              "use": "0x14135f100#945",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f21b#376",
+              "use": "0x14135f100#945",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#983",
+              "use": "0x14135f100#998",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#997",
+              "use": "0x14135f100#998",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#1026",
+              "use": "0x14135f100#1037",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1036",
+              "use": "0x14135f100#1037",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#1052",
+              "use": "0x14135f100#1063",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1062",
+              "use": "0x14135f100#1063",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#1065",
+              "use": "0x14135f100#1076",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1075",
+              "use": "0x14135f100#1076",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f0cd#54",
+              "use": "0x14135f100#1089",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1088",
+              "use": "0x14135f100#1089",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f103#1196",
+              "use": "0x14135f103#100",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f100#762",
+              "use": "0x14135f103#1196",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#97",
+              "use": "0x14135f10f#109",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f10f#109",
+              "use": "0x14135f112#114",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f118#115",
+              "use": "0x14135f118#1204",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f120#1206",
+              "use": "0x14135f120#117",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f118#1204",
+              "use": "0x14135f120#743",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f127#1205",
+              "use": "0x14135f120#743",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f120#743",
+              "use": "0x14135f120#1206",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#97",
+              "use": "0x14135f123#125",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f120#117",
+              "use": "0x14135f123#125",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f123#1212",
+              "use": "0x14135f123#126",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f123#126",
+              "use": "0x14135f123#132",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f123#125",
+              "use": "0x14135f123#1212",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f123#132",
+              "use": "0x14135f127#138",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f120#117",
+              "use": "0x14135f127#1205",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f120#117",
+              "use": "0x14135f129#777",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#97",
+              "use": "0x14135f131#154",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f129#777",
+              "use": "0x14135f131#154",
+              "input_index": 3
+            },
+            {
+              "definition": "0x14135f100#998",
+              "use": "0x14135f131#984",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1037",
+              "use": "0x14135f131#1027",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f107#104",
+              "use": "0x14135f131#1040",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1063",
+              "use": "0x14135f131#1053",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1076",
+              "use": "0x14135f131#1066",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1089",
+              "use": "0x14135f131#1079",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#154",
+              "use": "0x14135f13d#158",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f13d#158",
+              "use": "0x14135f146#172",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f146#172",
+              "use": "0x14135f146#173",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f13d#158",
+              "use": "0x14135f146#1208",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#1040",
+              "use": "0x14135f150#181",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f150#181",
+              "use": "0x14135f153#186",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f155#1187",
+              "use": "0x14135f158#1207",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f158#1207",
+              "use": "0x14135f15d#1186",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f146#1208",
+              "use": "0x14135f15d#1186",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f163#1197",
+              "use": "0x14135f16d#213",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f15d#1186",
+              "use": "0x14135f16d#213",
+              "input_index": 3
+            },
+            {
+              "definition": "0x14135f131#984",
+              "use": "0x14135f16d#985",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#1027",
+              "use": "0x14135f16d#1028",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#1040",
+              "use": "0x14135f16d#1041",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#1053",
+              "use": "0x14135f16d#1054",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#154",
+              "use": "0x14135f16d#1067",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#1079",
+              "use": "0x14135f16d#1080",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1048",
+              "use": "0x14135f17a#221",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f131#984",
+              "use": "0x14135f17a#996",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f16d#985",
+              "use": "0x14135f17a#996",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f131#1027",
+              "use": "0x14135f17a#1035",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f16d#1028",
+              "use": "0x14135f17a#1035",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f131#1040",
+              "use": "0x14135f17a#1048",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f16d#1041",
+              "use": "0x14135f17a#1048",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f131#154",
+              "use": "0x14135f17a#1074",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f16d#1067",
+              "use": "0x14135f17a#1074",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f131#1079",
+              "use": "0x14135f17a#1087",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f16d#1080",
+              "use": "0x14135f17a#1087",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f182#962",
+              "use": "0x14135f182#228",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f120#1206",
+              "use": "0x14135f182#962",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#221",
+              "use": "0x14135f189#235",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f17d#1198",
+              "use": "0x14135f189#1202",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1048",
+              "use": "0x14135f189#1203",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f189#1202",
+              "use": "0x14135f18d#710",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f189#1203",
+              "use": "0x14135f18d#710",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f18d#710",
+              "use": "0x14135f197#244",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f13d#158",
+              "use": "0x14135f197#244",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f100#97",
+              "use": "0x14135f197#244",
+              "input_index": 3
+            },
+            {
+              "definition": "0x14135f182#228",
+              "use": "0x14135f197#244",
+              "input_index": 4
+            },
+            {
+              "definition": "0x14135f17a#996",
+              "use": "0x14135f197#986",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1035",
+              "use": "0x14135f197#1029",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1048",
+              "use": "0x14135f197#1042",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f18d#710",
+              "use": "0x14135f197#1055",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1074",
+              "use": "0x14135f197#1068",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f17a#1087",
+              "use": "0x14135f197#1081",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f197#986",
+              "use": "0x14135f1b8#995",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#998",
+              "use": "0x14135f1b8#995",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f197#1029",
+              "use": "0x14135f1b8#1034",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1037",
+              "use": "0x14135f1b8#1034",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f197#1042",
+              "use": "0x14135f1b8#1047",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f107#104",
+              "use": "0x14135f1b8#1047",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f197#1055",
+              "use": "0x14135f1b8#1060",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1a9#444",
+              "use": "0x14135f1b8#1060",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f197#1068",
+              "use": "0x14135f1b8#1073",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b1#447",
+              "use": "0x14135f1b8#1073",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f197#1081",
+              "use": "0x14135f1b8#1086",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#1089",
+              "use": "0x14135f1b8#1086",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1be#1199",
+              "use": "0x14135f1c3#254",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1b8#1060",
+              "use": "0x14135f1c3#254",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f1b8#995",
+              "use": "0x14135f1c3#987",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b8#1034",
+              "use": "0x14135f1c3#1030",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b8#1047",
+              "use": "0x14135f1c3#1043",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b8#1060",
+              "use": "0x14135f1c3#1056",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b8#1073",
+              "use": "0x14135f1c3#1069",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1b8#1086",
+              "use": "0x14135f1c3#1082",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456c8694#11",
+              "use": "0x14135f1c8#255",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c8#1213",
+              "use": "0x14135f1c8#256",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c8#255",
+              "use": "0x14135f1c8#1213",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456c8694#11",
+              "use": "0x14135f1cc#259",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1cc#1214",
+              "use": "0x14135f1cc#260",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c8#256",
+              "use": "0x14135f1cc#266",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1cc#260",
+              "use": "0x14135f1cc#266",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1cc#259",
+              "use": "0x14135f1cc#1214",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1cc#266",
+              "use": "0x14135f1d0#272",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#11",
+              "use": "0x14135f1d7#274",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f0f4#1211",
+              "use": "0x14135f1de#279",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f1d7#274",
+              "use": "0x14135f1de#279",
+              "input_index": 3
+            },
+            {
+              "definition": "0x14135f1c3#987",
+              "use": "0x14135f1de#988",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c3#1030",
+              "use": "0x14135f1de#1031",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c3#1043",
+              "use": "0x14135f1de#1044",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c3#1056",
+              "use": "0x14135f1de#1057",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c3#1069",
+              "use": "0x14135f1de#1070",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c3#1082",
+              "use": "0x14135f1de#1083",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#974",
+              "use": "0x14135f1e3#280",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1c8#256",
+              "use": "0x14135f1e3#974",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#279",
+              "use": "0x14135f1e3#974",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#987",
+              "use": "0x14135f1e3#999",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#988",
+              "use": "0x14135f1e3#999",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#1030",
+              "use": "0x14135f1e3#1038",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#1031",
+              "use": "0x14135f1e3#1038",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#1043",
+              "use": "0x14135f1e3#1051",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#1044",
+              "use": "0x14135f1e3#1051",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#1056",
+              "use": "0x14135f1e3#1064",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#1057",
+              "use": "0x14135f1e3#1064",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#1069",
+              "use": "0x14135f1e3#1077",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#1070",
+              "use": "0x14135f1e3#1077",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1c3#1082",
+              "use": "0x14135f1e3#1090",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1de#1083",
+              "use": "0x14135f1e3#1090",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456c8694#11",
+              "use": "0x14135f1e6#283",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e6#1215",
+              "use": "0x14135f1e6#285",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#280",
+              "use": "0x14135f1e6#285",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f1e3#999",
+              "use": "0x14135f1e6#992",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e6#283",
+              "use": "0x14135f1e6#1215",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#974",
+              "use": "0x14135f1ea#286",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1ea#286",
+              "use": "0x14135f1f2#292",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f0f4#1211",
+              "use": "0x14135f1f6#335",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1f2#292",
+              "use": "0x14135f1f6#336",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1f6#335",
+              "use": "0x14135f1f6#336",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1f6#336",
+              "use": "0x14135f1f6#1216",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1f6#1216",
+              "use": "0x14135f1f9#344",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1038",
+              "use": "0x14135f1f9#344",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f1e6#992",
+              "use": "0x14135f1f9#993",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1fc#1200",
+              "use": "0x14135f1fc#347",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f103#100",
+              "use": "0x14135f1fc#347",
+              "input_index": 2
+            },
+            {
+              "definition": "0x14135f1f9#993",
+              "use": "0x14135f1fc#994",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1f6#1216",
+              "use": "0x14135f1fc#1200",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1051",
+              "use": "0x14135f208#355",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f208#355",
+              "use": "0x14135f20b#360",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1fc#994",
+              "use": "0x14135f20d#989",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1038",
+              "use": "0x14135f20d#1032",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1051",
+              "use": "0x14135f20d#1045",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1064",
+              "use": "0x14135f20d#1058",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1077",
+              "use": "0x14135f20d#1071",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1e3#1090",
+              "use": "0x14135f20d#1084",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f1fc#994",
+              "use": "0x14135f212#997",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#989",
+              "use": "0x14135f212#997",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1038",
+              "use": "0x14135f212#1036",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#1032",
+              "use": "0x14135f212#1036",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1051",
+              "use": "0x14135f212#1049",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#1045",
+              "use": "0x14135f212#1049",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1064",
+              "use": "0x14135f212#1062",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#1058",
+              "use": "0x14135f212#1062",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1077",
+              "use": "0x14135f212#1075",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#1071",
+              "use": "0x14135f212#1075",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f1e3#1090",
+              "use": "0x14135f212#1088",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f20d#1084",
+              "use": "0x14135f212#1088",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f100#762",
+              "use": "0x14135f212#1201",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f100#945",
+              "use": "0x14135f21b#376",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f21b#376",
+              "use": "0x14135f21b#379",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f21b#379",
+              "use": "0x14135f21f#385",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f212#1088",
+              "use": "0x14135f25d#409",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f25d#1217",
+              "use": "0x14135f25d#409",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f0bf#1195",
+              "use": "0x14135f25d#1217",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f25d#409",
+              "use": "0x14135f260#418",
+              "input_index": 1
+            },
+            {
+              "definition": "0x14135f212#997",
+              "use": "0x14135f260#990",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1049",
+              "use": "0x14135f260#1046",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1062",
+              "use": "0x14135f260#1059",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1075",
+              "use": "0x14135f260#1072",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f212#1088",
+              "use": "0x14135f260#1085",
+              "input_index": 0
+            },
+            {
+              "definition": "0x14135f260#990",
+              "use": "0x14135f26f#991",
+              "input_index": 0
+            }
+          ],
+          "parameters": [],
+          "parameter_uses": [],
+          "effects": [
+            {
+              "operation": "0x14135f100#97",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f103#100",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f112#114",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f123#126",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f127#138",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f131#154",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f146#173",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f153#186",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f16d#213",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f189#235",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f197#244",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1c3#254",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1c8#256",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1cc#260",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1d0#272",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f1de#279",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1e6#285",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x14135f1f6#335",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f1f9#344",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x14135f1fc#347",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x14135f20b#360",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f20d#363",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x14135f21f#385",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x14135f260#418",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456c8694#11",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            }
+          ],
+          "truncated": false,
+          "omitted_operations_lower_bound": 0,
+          "known_omitted_inputs": 0,
+          "known_omitted_edges": 0,
+          "limitations": [
+            "High p-code is decompiler-derived, not original source or runtime behavior. is_dead preserves the Java AST flag; decoded block members can retain that flag, so block_membership separately reports actual syntax-tree membership.",
+            "Def-use links do not cross function boundaries and may omit memory aliasing, call side effects, or unresolved indirect flow.",
+            "Memory read/write effects include stack and temporary memory operations; they do not identify persistent state or business meaning.",
+            "Operation, input, and def-use limits can truncate large functions; inspect truncation, omitted lower bounds, and known omitted counts before drawing conclusions.",
+            "Known omitted-edge counts cover links omitted from retained operations; omitted operations may contain additional uncounted links."
+          ]
+        },
+        "limitations": [
+          "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+          "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+          "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+          "Synthetic Ghidra entry-point references without actionable memory sources are omitted."
+        ]
+      },
+      "limitations": []
+    }
+  }
+}

@@ -1,0 +1,5116 @@
+{
+  "analysis_profile": {
+    "provider": "Ghidra 12.1.4",
+    "bridge": "REA 6.4.0 packaged Java bridge",
+    "mode": "PE import, explicit function seeds, no default whole-program auto-analysis",
+    "seeds_sha256": "8302ccc4d696fc3f3f259625c3b487c722417f2634da6cd6f48fa1944d4ceeab",
+    "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221"
+  },
+  "bridge_result": {
+    "id": 17,
+    "ok": true,
+    "result": {
+      "value": {
+        "procedure": {
+          "address": "0x1456ca2a0",
+          "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1456ca2a0",
+                "end": "0x1456ca375"
+              }
+            ],
+            "total_bytes": 214,
+            "span_bytes": 214,
+            "non_contiguous": false,
+            "contains_entry": true
+          },
+          "signature": "undefined RGFPC_exec_OnRep_ReplicatedBoneState()",
+          "locals": []
+        },
+        "pseudocode": "\nvoid RGFPC_exec_OnRep_ReplicatedBoneState(longlong *param_1,longlong param_2)\n\n{\n  longlong *plVar1;\n  longlong alStack_38 [6];\n  \n  alStack_38[0] = 0;\n  alStack_38[1] = 0;\n  alStack_38[2] = 0;\n  alStack_38[3] = 0;\n  alStack_38[4] = 0;\n  alStack_38[5] = 0;\n  *(undefined8 *)(param_2 + 0x38) = 0;\n  *(undefined8 *)(param_2 + 0x40) = 0;\n  if (*(longlong *)(param_2 + 0x20) == 0) {\n    *(undefined8 *)(param_2 + 0x88) = *(undefined8 *)(*(longlong *)(param_2 + 0x88) + 0x18);\n    func_0x000141499e40(param_2,alStack_38);\n  }\n  else {\n    func_0x000141499e10(param_2,*(undefined8 *)(param_2 + 0x18),alStack_38);\n  }\n  plVar1 = alStack_38;\n  if (*(longlong **)(param_2 + 0x38) != (longlong *)0x0) {\n    plVar1 = *(longlong **)(param_2 + 0x38);\n  }\n  *(ulonglong *)(param_2 + 0x20) =\n       (ulonglong)(*(longlong *)(param_2 + 0x20) != 0) + *(longlong *)(param_2 + 0x20);\n  (**(code **)(*param_1 + 0x9f0))(param_1,plVar1);\n  if (alStack_38[4] != 0) {\n    FUN_141108750();\n  }\n  if (alStack_38[2] != 0) {\n    FUN_141108750();\n  }\n  if (alStack_38[0] != 0) {\n    FUN_141108750();\n  }\n  return;\n}\n\n",
+        "assembly": [
+          "0x1456ca2a0: MOV RAX, RSP",
+          "0x1456ca2a3: MOV qword ptr [RAX + 0x8], RBX",
+          "0x1456ca2a7: MOV qword ptr [RAX + 0x10], RSI",
+          "0x1456ca2ab: PUSH RDI",
+          "0x1456ca2ac: SUB RSP, 0x50",
+          "0x1456ca2b0: XOR EBX, EBX",
+          "0x1456ca2b2: MOV RSI, RCX",
+          "0x1456ca2b5: MOV RDI, RDX",
+          "0x1456ca2b8: MOV qword ptr [RAX + -0x38], RBX",
+          "0x1456ca2bc: MOV RCX, RDX",
+          "0x1456ca2bf: MOV qword ptr [RAX + -0x30], RBX",
+          "0x1456ca2c3: MOV qword ptr [RAX + -0x28], RBX",
+          "0x1456ca2c7: MOV qword ptr [RAX + -0x20], RBX",
+          "0x1456ca2cb: MOV qword ptr [RAX + -0x18], RBX",
+          "0x1456ca2cf: MOV qword ptr [RAX + -0x10], RBX",
+          "0x1456ca2d3: MOV qword ptr [RDX + 0x38], RBX",
+          "0x1456ca2d7: MOV qword ptr [RDX + 0x40], RBX",
+          "0x1456ca2db: CMP qword ptr [RDX + 0x20], RBX",
+          "0x1456ca2df: JZ 0x1456ca2f0",
+          "0x1456ca2e1: MOV RDX, qword ptr [RDX + 0x18]",
+          "0x1456ca2e5: LEA R8, [RAX + -0x38]",
+          "0x1456ca2e9: CALL 0x141499e10",
+          "0x1456ca2ee: JMP 0x1456ca30c",
+          "0x1456ca2f0: MOV R8, qword ptr [RDX + 0x88]",
+          "0x1456ca2f7: MOV RAX, qword ptr [R8 + 0x18]",
+          "0x1456ca2fb: MOV qword ptr [RDX + 0x88], RAX",
+          "0x1456ca302: LEA RDX, [RSP + 0x20]",
+          "0x1456ca307: CALL 0x141499e40",
+          "0x1456ca30c: MOV RAX, qword ptr [RDI + 0x38]",
+          "0x1456ca310: LEA RDX, [RSP + 0x20]",
+          "0x1456ca315: TEST RAX, RAX",
+          "0x1456ca318: MOV RCX, RSI",
+          "0x1456ca31b: CMOVNZ RDX, RAX",
+          "0x1456ca31f: MOV RAX, qword ptr [RDI + 0x20]",
+          "0x1456ca323: TEST RAX, RAX",
+          "0x1456ca326: SETNZ BL",
+          "0x1456ca329: ADD RBX, RAX",
+          "0x1456ca32c: MOV qword ptr [RDI + 0x20], RBX",
+          "0x1456ca330: MOV RAX, qword ptr [RSI]",
+          "0x1456ca333: CALL qword ptr [RAX + 0x9f0]",
+          "0x1456ca339: MOV RCX, qword ptr [RSP + 0x40]",
+          "0x1456ca33e: TEST RCX, RCX",
+          "0x1456ca341: JZ 0x1456ca348",
+          "0x1456ca343: CALL 0x141108750",
+          "0x1456ca348: MOV RCX, qword ptr [RSP + 0x30]",
+          "0x1456ca34d: TEST RCX, RCX",
+          "0x1456ca350: JZ 0x1456ca357",
+          "0x1456ca352: CALL 0x141108750",
+          "0x1456ca357: MOV RCX, qword ptr [RSP + 0x20]",
+          "0x1456ca35c: TEST RCX, RCX",
+          "0x1456ca35f: JZ 0x1456ca366",
+          "0x1456ca361: CALL 0x141108750",
+          "0x1456ca366: MOV RBX, qword ptr [RSP + 0x60]",
+          "0x1456ca36b: MOV RSI, qword ptr [RSP + 0x68]",
+          "0x1456ca370: ADD RSP, 0x50",
+          "0x1456ca374: POP RDI",
+          "0x1456ca375: RET"
+        ],
+        "comments": [],
+        "callers": [],
+        "callees": [
+          {
+            "address": "0x141108750",
+            "name": "FUN_141108750",
+            "classification": {
+              "external": false,
+              "thunk": false,
+              "thunk_target": null,
+              "provenance": "ghidra-function-manager"
+            },
+            "body": {
+              "available": true,
+              "provenance": "ghidra-function-body-address-set",
+              "ranges": [
+                {
+                  "start": "0x141108750",
+                  "end": "0x141108750"
+                }
+              ],
+              "total_bytes": 1,
+              "span_bytes": 1,
+              "non_contiguous": false,
+              "contains_entry": true
+            }
+          }
+        ],
+        "incoming_references": [
+          {
+            "source_address": "0x14abf668c",
+            "target_address": "0x1456ca2a0",
+            "source_procedure": null,
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "DATA",
+              "flow": false,
+              "call": false,
+              "jump": false,
+              "data": true,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          }
+        ],
+        "outgoing_references": [
+          {
+            "source_address": "0x1456ca2df",
+            "target_address": "0x1456ca2f0",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "CONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": true,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca2e9",
+            "target_address": "0x141499e10",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": null,
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca2ee",
+            "target_address": "0x1456ca30c",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca307",
+            "target_address": "0x141499e40",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": null,
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca341",
+            "target_address": "0x1456ca348",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "CONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": true,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca343",
+            "target_address": "0x141108750",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x141108750",
+              "name": "FUN_141108750",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x141108750",
+                    "end": "0x141108750"
+                  }
+                ],
+                "total_bytes": 1,
+                "span_bytes": 1,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca350",
+            "target_address": "0x1456ca357",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "CONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": true,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca352",
+            "target_address": "0x141108750",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x141108750",
+              "name": "FUN_141108750",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x141108750",
+                    "end": "0x141108750"
+                  }
+                ],
+                "total_bytes": 1,
+                "span_bytes": 1,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca35f",
+            "target_address": "0x1456ca366",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "CONDITIONAL_JUMP",
+              "flow": true,
+              "call": false,
+              "jump": true,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": true,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          },
+          {
+            "source_address": "0x1456ca361",
+            "target_address": "0x141108750",
+            "source_procedure": {
+              "address": "0x1456ca2a0",
+              "name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x1456ca2a0",
+                    "end": "0x1456ca375"
+                  }
+                ],
+                "total_bytes": 214,
+                "span_bytes": 214,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "target_procedure": {
+              "address": "0x141108750",
+              "name": "FUN_141108750",
+              "classification": {
+                "external": false,
+                "thunk": false,
+                "thunk_target": null,
+                "provenance": "ghidra-function-manager"
+              },
+              "body": {
+                "available": true,
+                "provenance": "ghidra-function-body-address-set",
+                "ranges": [
+                  {
+                    "start": "0x141108750",
+                    "end": "0x141108750"
+                  }
+                ],
+                "total_bytes": 1,
+                "span_bytes": 1,
+                "non_contiguous": false,
+                "contains_entry": true
+              }
+            },
+            "kind": {
+              "available": true,
+              "provenance": "ghidra-reference-manager",
+              "type": "UNCONDITIONAL_CALL",
+              "flow": true,
+              "call": true,
+              "jump": false,
+              "data": false,
+              "read": false,
+              "write": false,
+              "indirect": false,
+              "computed": false,
+              "conditional": false,
+              "terminal": false,
+              "primary": true,
+              "operand_index": 0,
+              "external": false
+            }
+          }
+        ],
+        "referenced_strings": [],
+        "referenced_names": [
+          {
+            "address": "0x141108750",
+            "value": "FUN_141108750",
+            "source_address": "0x1456ca343"
+          },
+          {
+            "address": "0x141108750",
+            "value": "FUN_141108750",
+            "source_address": "0x1456ca352"
+          },
+          {
+            "address": "0x141108750",
+            "value": "FUN_141108750",
+            "source_address": "0x1456ca361"
+          },
+          {
+            "address": "0x141499e10",
+            "value": "SUB_141499e10",
+            "source_address": "0x1456ca2e9"
+          },
+          {
+            "address": "0x141499e40",
+            "value": "SUB_141499e40",
+            "source_address": "0x1456ca307"
+          },
+          {
+            "address": "0x1456ca2f0",
+            "value": "LAB_1456ca2f0",
+            "source_address": "0x1456ca2df"
+          },
+          {
+            "address": "0x1456ca30c",
+            "value": "LAB_1456ca30c",
+            "source_address": "0x1456ca2ee"
+          },
+          {
+            "address": "0x1456ca348",
+            "value": "LAB_1456ca348",
+            "source_address": "0x1456ca341"
+          },
+          {
+            "address": "0x1456ca357",
+            "value": "LAB_1456ca357",
+            "source_address": "0x1456ca350"
+          },
+          {
+            "address": "0x1456ca366",
+            "value": "LAB_1456ca366",
+            "source_address": "0x1456ca35f"
+          }
+        ],
+        "basic_blocks": [
+          {
+            "start": "0x1456ca2a0",
+            "end": "0x1456ca2e1",
+            "successors": [
+              "0x1456ca2e1",
+              "0x1456ca2f0"
+            ]
+          },
+          {
+            "start": "0x1456ca2e1",
+            "end": "0x1456ca2f0",
+            "successors": [
+              "0x1456ca30c"
+            ]
+          },
+          {
+            "start": "0x1456ca2f0",
+            "end": "0x1456ca30c",
+            "successors": [
+              "0x1456ca30c"
+            ]
+          },
+          {
+            "start": "0x1456ca30c",
+            "end": "0x1456ca343",
+            "successors": [
+              "0x1456ca343",
+              "0x1456ca348"
+            ]
+          },
+          {
+            "start": "0x1456ca343",
+            "end": "0x1456ca348",
+            "successors": [
+              "0x1456ca348"
+            ]
+          },
+          {
+            "start": "0x1456ca348",
+            "end": "0x1456ca352",
+            "successors": [
+              "0x1456ca352",
+              "0x1456ca357"
+            ]
+          },
+          {
+            "start": "0x1456ca352",
+            "end": "0x1456ca357",
+            "successors": [
+              "0x1456ca357"
+            ]
+          },
+          {
+            "start": "0x1456ca357",
+            "end": "0x1456ca361",
+            "successors": [
+              "0x1456ca361",
+              "0x1456ca366"
+            ]
+          },
+          {
+            "start": "0x1456ca361",
+            "end": "0x1456ca366",
+            "successors": [
+              "0x1456ca366"
+            ]
+          },
+          {
+            "start": "0x1456ca366",
+            "end": "0x1456ca376",
+            "successors": []
+          }
+        ],
+        "native_api": {
+          "available": true,
+          "provenance": "ghidra-high-function",
+          "signature_source": "default",
+          "calling_convention": "__fastcall",
+          "return_type": {
+            "role": "return",
+            "ordinal": null,
+            "name": null,
+            "data_type": "void",
+            "size_bytes": 0,
+            "storage": "<VOID>",
+            "confidence": "low",
+            "evidence": [
+              {
+                "kind": "signature-source",
+                "source": "ghidra-function-manager",
+                "detail": "Function signature source is default."
+              },
+              {
+                "kind": "decompiler-type",
+                "source": "ghidra-high-function",
+                "detail": "HighFunction recovered data type void."
+              }
+            ],
+            "decompiler_artifacts": [
+              "recovered-signature",
+              "register-or-stack-storage"
+            ]
+          },
+          "parameters": [
+            {
+              "role": "parameter",
+              "ordinal": 0,
+              "name": "param_1",
+              "data_type": "longlong *",
+              "size_bytes": 8,
+              "storage": "RCX:8",
+              "confidence": "low",
+              "evidence": [
+                {
+                  "kind": "signature-source",
+                  "source": "ghidra-function-manager",
+                  "detail": "Function signature source is default."
+                },
+                {
+                  "kind": "decompiler-type",
+                  "source": "ghidra-high-function",
+                  "detail": "HighFunction recovered data type longlong *."
+                }
+              ],
+              "decompiler_artifacts": [
+                "recovered-signature",
+                "register-or-stack-storage",
+                "compiler-generated-variable"
+              ]
+            },
+            {
+              "role": "parameter",
+              "ordinal": 1,
+              "name": "param_2",
+              "data_type": "longlong",
+              "size_bytes": 8,
+              "storage": "RDX:8",
+              "confidence": "low",
+              "evidence": [
+                {
+                  "kind": "signature-source",
+                  "source": "ghidra-function-manager",
+                  "detail": "Function signature source is default."
+                },
+                {
+                  "kind": "decompiler-type",
+                  "source": "ghidra-high-function",
+                  "detail": "HighFunction recovered data type longlong."
+                }
+              ],
+              "decompiler_artifacts": [
+                "recovered-signature",
+                "register-or-stack-storage",
+                "compiler-generated-variable"
+              ]
+            }
+          ],
+          "jump_tables": [],
+          "pseudocode": {
+            "classification": "decompiler-generated-non-source",
+            "compilable": false
+          },
+          "decompiler_artifacts": [
+            "recovered-signature",
+            "register-and-stack-variables",
+            "compiler-generated-control-flow",
+            "pointer-arithmetic",
+            "pseudocode"
+          ],
+          "limitations": [
+            "Types and calling conventions are Ghidra decompiler observations, not source declarations.",
+            "Register variables, compiler-generated blocks, and pointer arithmetic remain decompiler artifacts.",
+            "Pseudocode is neither original source nor guaranteed to compile."
+          ]
+        },
+        "native_value_flow": {
+          "available": true,
+          "provenance": "ghidra-high-pcode",
+          "operations": [
+            {
+              "id": "0x1456ca2b8#33",
+              "address": "0x1456ca2b8",
+              "sequence": 33,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2bf#37",
+              "address": "0x1456ca2bf",
+              "sequence": 37,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2c3#40",
+              "address": "0x1456ca2c3",
+              "sequence": 40,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2c7#43",
+              "address": "0x1456ca2c7",
+              "sequence": 43,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2cb#46",
+              "address": "0x1456ca2cb",
+              "sequence": 46,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2cf#49",
+              "address": "0x1456ca2cf",
+              "sequence": 49,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2d3#50",
+              "address": "0x1456ca2d3",
+              "sequence": 50,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "38"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000b2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2d3#52",
+              "address": "0x1456ca2d3",
+              "sequence": 52,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2d3#477",
+              "address": "0x1456ca2d3",
+              "sequence": 477,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000b2",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2d7#53",
+              "address": "0x1456ca2d7",
+              "sequence": 53,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "40"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000ba",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2d7#55",
+              "address": "0x1456ca2d7",
+              "sequence": 55,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2d7#478",
+              "address": "0x1456ca2d7",
+              "sequence": 478,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000ba",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2db#56",
+              "address": "0x1456ca2db",
+              "sequence": 56,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "20"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000c2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2db#57",
+              "address": "0x1456ca2db",
+              "sequence": 57,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2db#63",
+              "address": "0x1456ca2db",
+              "sequence": 63,
+              "opcode": "INT_EQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2db#479",
+              "address": "0x1456ca2db",
+              "sequence": 479,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000c2",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2df#68",
+              "address": "0x1456ca2df",
+              "sequence": 68,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca2f0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2e1#69",
+              "address": "0x1456ca2e1",
+              "sequence": 69,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "18"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000e2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e1#70",
+              "address": "0x1456ca2e1",
+              "sequence": 70,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e1#483",
+              "address": "0x1456ca2e1",
+              "sequence": 483,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000e2",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e5#472",
+              "address": "0x1456ca2e5",
+              "sequence": 472,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffffffffffc8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#76",
+              "address": "0x1456ca2e9",
+              "sequence": 76,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141499e10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2e9#399",
+              "address": "0x1456ca2e9",
+              "sequence": 399,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#409",
+              "address": "0x1456ca2e9",
+              "sequence": 409,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#419",
+              "address": "0x1456ca2e9",
+              "sequence": 419,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#429",
+              "address": "0x1456ca2e9",
+              "sequence": 429,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#439",
+              "address": "0x1456ca2e9",
+              "sequence": 439,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2e9#449",
+              "address": "0x1456ca2e9",
+              "sequence": 449,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "4c"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2ee#77",
+              "address": "0x1456ca2ee",
+              "sequence": 77,
+              "opcode": "BRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca30c",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2f0#202",
+              "address": "0x1456ca2f0",
+              "sequence": 202,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "88"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000ca",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2f0#203",
+              "address": "0x1456ca2f0",
+              "sequence": 203,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9000",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2f0#480",
+              "address": "0x1456ca2f0",
+              "sequence": 480,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000ca",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9000",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2f7#205",
+              "address": "0x1456ca2f7",
+              "sequence": 205,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "18"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000d2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2f7#206",
+              "address": "0x1456ca2f7",
+              "sequence": 206,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2f7#481",
+              "address": "0x1456ca2f7",
+              "sequence": 481,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000d2",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2fb#208",
+              "address": "0x1456ca2fb",
+              "sequence": 208,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "88"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000da",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca2fb#210",
+              "address": "0x1456ca2fb",
+              "sequence": 210,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9000",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca2fb#482",
+              "address": "0x1456ca2fb",
+              "sequence": 482,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000da",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9000",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca302#473",
+              "address": "0x1456ca302",
+              "sequence": 473,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffffffffffc8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9c00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#215",
+              "address": "0x1456ca307",
+              "sequence": 215,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141499e40",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9c00",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca307#398",
+              "address": "0x1456ca307",
+              "sequence": 398,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#408",
+              "address": "0x1456ca307",
+              "sequence": 408,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#418",
+              "address": "0x1456ca307",
+              "sequence": 418,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#428",
+              "address": "0x1456ca307",
+              "sequence": 428,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#438",
+              "address": "0x1456ca307",
+              "sequence": 438,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca307#448",
+              "address": "0x1456ca307",
+              "sequence": 448,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "d7"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#78",
+              "address": "0x1456ca30c",
+              "sequence": 78,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "38"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000ea",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#79",
+              "address": "0x1456ca30c",
+              "sequence": 79,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#407",
+              "address": "0x1456ca30c",
+              "sequence": 407,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#417",
+              "address": "0x1456ca30c",
+              "sequence": 417,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#427",
+              "address": "0x1456ca30c",
+              "sequence": 427,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#437",
+              "address": "0x1456ca30c",
+              "sequence": 437,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#447",
+              "address": "0x1456ca30c",
+              "sequence": 447,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#457",
+              "address": "0x1456ca30c",
+              "sequence": 457,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca30c#484",
+              "address": "0x1456ca30c",
+              "sequence": 484,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000ea",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca310#474",
+              "address": "0x1456ca310",
+              "sequence": 474,
+              "opcode": "PTRSUB",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x20",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "ffffffffffffffc8"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9c00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca315#87",
+              "address": "0x1456ca315",
+              "sequence": 87,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31b#96",
+              "address": "0x1456ca31b",
+              "sequence": 96,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca31f",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca31b#475",
+              "address": "0x1456ca31b",
+              "sequence": 475,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9c00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000a2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31b#476",
+              "address": "0x1456ca31b",
+              "sequence": 476,
+              "opcode": "COPY",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000aa",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31f#98",
+              "address": "0x1456ca31f",
+              "sequence": 98,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "20"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000f2",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31f#99",
+              "address": "0x1456ca31f",
+              "sequence": 99,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31f#272",
+              "address": "0x1456ca31f",
+              "sequence": 272,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000a2",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000aa",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x10",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca31f#485",
+              "address": "0x1456ca31f",
+              "sequence": 485,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000f2",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca323#105",
+              "address": "0x1456ca323",
+              "sequence": 105,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca326#281",
+              "address": "0x1456ca326",
+              "sequence": 281,
+              "opcode": "INT_ZEXT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x18",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca329#114",
+              "address": "0x1456ca329",
+              "sequence": 114,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 8,
+                "location": "register:0x18",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca32c#121",
+              "address": "0x1456ca32c",
+              "sequence": 121,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "20"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x100000fa",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca32c#123",
+              "address": "0x1456ca32c",
+              "sequence": 123,
+              "opcode": "STORE",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x8e00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x18",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca32c#486",
+              "address": "0x1456ca32c",
+              "sequence": 486,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x100000fa",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x8e00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca330#124",
+              "address": "0x1456ca330",
+              "sequence": 124,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#126",
+              "address": "0x1456ca333",
+              "sequence": 126,
+              "opcode": "INT_ADD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "9f0"
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x10000102",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#127",
+              "address": "0x1456ca333",
+              "sequence": 127,
+              "opcode": "LOAD",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "1b1"
+                },
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x9000",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x23d00",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#131",
+              "address": "0x1456ca333",
+              "sequence": 131,
+              "opcode": "CALLIND",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x23d00",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 8,
+                  "location": "register:0x10",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca333#400",
+              "address": "0x1456ca333",
+              "sequence": 400,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#410",
+              "address": "0x1456ca333",
+              "sequence": 410,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#420",
+              "address": "0x1456ca333",
+              "sequence": 420,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#430",
+              "address": "0x1456ca333",
+              "sequence": 430,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#440",
+              "address": "0x1456ca333",
+              "sequence": 440,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#450",
+              "address": "0x1456ca333",
+              "sequence": 450,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "83"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca333#487",
+              "address": "0x1456ca333",
+              "sequence": 487,
+              "opcode": "CAST",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "unique",
+                  "size_bytes": 8,
+                  "location": "unique:0x10000102",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "unique",
+                "size_bytes": 8,
+                "location": "unique:0x9000",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca33e#139",
+              "address": "0x1456ca33e",
+              "sequence": 139,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca341#144",
+              "address": "0x1456ca341",
+              "sequence": 144,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca348",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca343#147",
+              "address": "0x1456ca343",
+              "sequence": 147,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141108750",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca343#401",
+              "address": "0x1456ca343",
+              "sequence": 401,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca343#411",
+              "address": "0x1456ca343",
+              "sequence": 411,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca343#421",
+              "address": "0x1456ca343",
+              "sequence": 421,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca343#431",
+              "address": "0x1456ca343",
+              "sequence": 431,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca343#441",
+              "address": "0x1456ca343",
+              "sequence": 441,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca343#451",
+              "address": "0x1456ca343",
+              "sequence": 451,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "93"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#406",
+              "address": "0x1456ca348",
+              "sequence": 406,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#416",
+              "address": "0x1456ca348",
+              "sequence": 416,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#426",
+              "address": "0x1456ca348",
+              "sequence": 426,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#436",
+              "address": "0x1456ca348",
+              "sequence": 436,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#446",
+              "address": "0x1456ca348",
+              "sequence": 446,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca348#456",
+              "address": "0x1456ca348",
+              "sequence": 456,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca34d#155",
+              "address": "0x1456ca34d",
+              "sequence": 155,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca350#160",
+              "address": "0x1456ca350",
+              "sequence": 160,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca357",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca352#163",
+              "address": "0x1456ca352",
+              "sequence": 163,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141108750",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca352#402",
+              "address": "0x1456ca352",
+              "sequence": 402,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca352#412",
+              "address": "0x1456ca352",
+              "sequence": 412,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca352#422",
+              "address": "0x1456ca352",
+              "sequence": 422,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca352#432",
+              "address": "0x1456ca352",
+              "sequence": 432,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca352#442",
+              "address": "0x1456ca352",
+              "sequence": 442,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca352#452",
+              "address": "0x1456ca352",
+              "sequence": 452,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "a3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#405",
+              "address": "0x1456ca357",
+              "sequence": 405,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#415",
+              "address": "0x1456ca357",
+              "sequence": 415,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#425",
+              "address": "0x1456ca357",
+              "sequence": 425,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#435",
+              "address": "0x1456ca357",
+              "sequence": 435,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#445",
+              "address": "0x1456ca357",
+              "sequence": 445,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca357#455",
+              "address": "0x1456ca357",
+              "sequence": 455,
+              "opcode": "MULTIEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca35c#171",
+              "address": "0x1456ca35c",
+              "sequence": 171,
+              "opcode": "INT_NOTEQUAL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": {
+                "kind": "register",
+                "size_bytes": 1,
+                "location": "register:0x206",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca35f#176",
+              "address": "0x1456ca35f",
+              "sequence": 176,
+              "opcode": "CBRANCH",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 1,
+                  "location": "0x1456ca366",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "register",
+                  "size_bytes": 1,
+                  "location": "register:0x206",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca361#179",
+              "address": "0x1456ca361",
+              "sequence": 179,
+              "opcode": "CALL",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "address",
+                  "size_bytes": 8,
+                  "location": "0x141108750",
+                  "constant_hex": null
+                }
+              ],
+              "output": null
+            },
+            {
+              "id": "0x1456ca361#403",
+              "address": "0x1456ca361",
+              "sequence": 403,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffc8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffc8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca361#413",
+              "address": "0x1456ca361",
+              "sequence": 413,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca361#423",
+              "address": "0x1456ca361",
+              "sequence": 423,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffd8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffd8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca361#433",
+              "address": "0x1456ca361",
+              "sequence": 433,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca361#443",
+              "address": "0x1456ca361",
+              "sequence": 443,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xffffffffffffffe8",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xffffffffffffffe8",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca361#453",
+              "address": "0x1456ca361",
+              "sequence": 453,
+              "opcode": "INDIRECT",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "other",
+                  "size_bytes": 8,
+                  "location": "stack:0xfffffffffffffff0",
+                  "constant_hex": null
+                },
+                {
+                  "kind": "constant",
+                  "size_bytes": 4,
+                  "location": null,
+                  "constant_hex": "b3"
+                }
+              ],
+              "output": {
+                "kind": "other",
+                "size_bytes": 8,
+                "location": "stack:0xfffffffffffffff0",
+                "constant_hex": null
+              }
+            },
+            {
+              "id": "0x1456ca375#201",
+              "address": "0x1456ca375",
+              "sequence": 201,
+              "opcode": "RETURN",
+              "is_dead": true,
+              "block_membership": "member",
+              "inputs": [
+                {
+                  "kind": "constant",
+                  "size_bytes": 8,
+                  "location": null,
+                  "constant_hex": "0"
+                }
+              ],
+              "output": null
+            }
+          ],
+          "def_use": [
+            {
+              "definition": "0x1456ca2d3#477",
+              "use": "0x1456ca2d3#52",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2d3#50",
+              "use": "0x1456ca2d3#477",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2d7#478",
+              "use": "0x1456ca2d7#55",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2d7#53",
+              "use": "0x1456ca2d7#478",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2db#479",
+              "use": "0x1456ca2db#57",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2db#57",
+              "use": "0x1456ca2db#63",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2db#56",
+              "use": "0x1456ca2db#479",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2db#63",
+              "use": "0x1456ca2df#68",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e1#483",
+              "use": "0x1456ca2e1#70",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e1#69",
+              "use": "0x1456ca2e1#483",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2e1#70",
+              "use": "0x1456ca2e9#76",
+              "input_index": 2
+            },
+            {
+              "definition": "0x1456ca2e5#472",
+              "use": "0x1456ca2e9#76",
+              "input_index": 3
+            },
+            {
+              "definition": "0x1456ca2b8#33",
+              "use": "0x1456ca2e9#399",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2bf#37",
+              "use": "0x1456ca2e9#409",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2c3#40",
+              "use": "0x1456ca2e9#419",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2c7#43",
+              "use": "0x1456ca2e9#429",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2cb#46",
+              "use": "0x1456ca2e9#439",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2cf#49",
+              "use": "0x1456ca2e9#449",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2f0#480",
+              "use": "0x1456ca2f0#203",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2f0#202",
+              "use": "0x1456ca2f0#480",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2f0#203",
+              "use": "0x1456ca2f7#205",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2f7#481",
+              "use": "0x1456ca2f7#206",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2f7#205",
+              "use": "0x1456ca2f7#481",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2fb#482",
+              "use": "0x1456ca2fb#210",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2f7#206",
+              "use": "0x1456ca2fb#210",
+              "input_index": 2
+            },
+            {
+              "definition": "0x1456ca2fb#208",
+              "use": "0x1456ca2fb#482",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca302#473",
+              "use": "0x1456ca307#215",
+              "input_index": 2
+            },
+            {
+              "definition": "0x1456ca2b8#33",
+              "use": "0x1456ca307#398",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2bf#37",
+              "use": "0x1456ca307#408",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2c3#40",
+              "use": "0x1456ca307#418",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2c7#43",
+              "use": "0x1456ca307#428",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2cb#46",
+              "use": "0x1456ca307#438",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca2cf#49",
+              "use": "0x1456ca307#448",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#484",
+              "use": "0x1456ca30c#79",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#399",
+              "use": "0x1456ca30c#407",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#398",
+              "use": "0x1456ca30c#407",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#409",
+              "use": "0x1456ca30c#417",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#408",
+              "use": "0x1456ca30c#417",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#419",
+              "use": "0x1456ca30c#427",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#418",
+              "use": "0x1456ca30c#427",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#429",
+              "use": "0x1456ca30c#437",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#428",
+              "use": "0x1456ca30c#437",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#439",
+              "use": "0x1456ca30c#447",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#438",
+              "use": "0x1456ca30c#447",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca2e9#449",
+              "use": "0x1456ca30c#457",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca307#448",
+              "use": "0x1456ca30c#457",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca30c#78",
+              "use": "0x1456ca30c#484",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#79",
+              "use": "0x1456ca315#87",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca315#87",
+              "use": "0x1456ca31b#96",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca310#474",
+              "use": "0x1456ca31b#475",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#79",
+              "use": "0x1456ca31b#476",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca31f#485",
+              "use": "0x1456ca31f#99",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca31b#475",
+              "use": "0x1456ca31f#272",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca31b#476",
+              "use": "0x1456ca31f#272",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca31f#98",
+              "use": "0x1456ca31f#485",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca31f#99",
+              "use": "0x1456ca323#105",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca323#105",
+              "use": "0x1456ca326#281",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca326#281",
+              "use": "0x1456ca329#114",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca31f#99",
+              "use": "0x1456ca329#114",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca32c#486",
+              "use": "0x1456ca32c#123",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca329#114",
+              "use": "0x1456ca32c#123",
+              "input_index": 2
+            },
+            {
+              "definition": "0x1456ca32c#121",
+              "use": "0x1456ca32c#486",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca330#124",
+              "use": "0x1456ca333#126",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#487",
+              "use": "0x1456ca333#127",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#127",
+              "use": "0x1456ca333#131",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca31f#272",
+              "use": "0x1456ca333#131",
+              "input_index": 2
+            },
+            {
+              "definition": "0x1456ca30c#407",
+              "use": "0x1456ca333#400",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#417",
+              "use": "0x1456ca333#410",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#427",
+              "use": "0x1456ca333#420",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#437",
+              "use": "0x1456ca333#430",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#447",
+              "use": "0x1456ca333#440",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca30c#457",
+              "use": "0x1456ca333#450",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#126",
+              "use": "0x1456ca333#487",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#440",
+              "use": "0x1456ca33e#139",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca33e#139",
+              "use": "0x1456ca341#144",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#400",
+              "use": "0x1456ca343#401",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#410",
+              "use": "0x1456ca343#411",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#420",
+              "use": "0x1456ca343#421",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#430",
+              "use": "0x1456ca343#431",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#440",
+              "use": "0x1456ca343#441",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#450",
+              "use": "0x1456ca343#451",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca333#400",
+              "use": "0x1456ca348#406",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#401",
+              "use": "0x1456ca348#406",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#410",
+              "use": "0x1456ca348#416",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#411",
+              "use": "0x1456ca348#416",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#420",
+              "use": "0x1456ca348#426",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#421",
+              "use": "0x1456ca348#426",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#430",
+              "use": "0x1456ca348#436",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#431",
+              "use": "0x1456ca348#436",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#440",
+              "use": "0x1456ca348#446",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#441",
+              "use": "0x1456ca348#446",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca333#450",
+              "use": "0x1456ca348#456",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca343#451",
+              "use": "0x1456ca348#456",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#426",
+              "use": "0x1456ca34d#155",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca34d#155",
+              "use": "0x1456ca350#160",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#406",
+              "use": "0x1456ca352#402",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#416",
+              "use": "0x1456ca352#412",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#426",
+              "use": "0x1456ca352#422",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#436",
+              "use": "0x1456ca352#432",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#446",
+              "use": "0x1456ca352#442",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#456",
+              "use": "0x1456ca352#452",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca348#406",
+              "use": "0x1456ca357#405",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#402",
+              "use": "0x1456ca357#405",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#416",
+              "use": "0x1456ca357#415",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#412",
+              "use": "0x1456ca357#415",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#426",
+              "use": "0x1456ca357#425",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#422",
+              "use": "0x1456ca357#425",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#436",
+              "use": "0x1456ca357#435",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#432",
+              "use": "0x1456ca357#435",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#446",
+              "use": "0x1456ca357#445",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#442",
+              "use": "0x1456ca357#445",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca348#456",
+              "use": "0x1456ca357#455",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca352#452",
+              "use": "0x1456ca357#455",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca357#405",
+              "use": "0x1456ca35c#171",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca35c#171",
+              "use": "0x1456ca35f#176",
+              "input_index": 1
+            },
+            {
+              "definition": "0x1456ca357#405",
+              "use": "0x1456ca361#403",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca357#415",
+              "use": "0x1456ca361#413",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca357#425",
+              "use": "0x1456ca361#423",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca357#435",
+              "use": "0x1456ca361#433",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca357#445",
+              "use": "0x1456ca361#443",
+              "input_index": 0
+            },
+            {
+              "definition": "0x1456ca357#455",
+              "use": "0x1456ca361#453",
+              "input_index": 0
+            }
+          ],
+          "parameters": [
+            {
+              "ordinal": 0,
+              "name": "param_1",
+              "data_type": "/longlong *"
+            },
+            {
+              "ordinal": 1,
+              "name": "param_2",
+              "data_type": "/longlong"
+            }
+          ],
+          "parameter_uses": [
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2d3#50",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2d7#53",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2db#56",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2e1#69",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2e9#76",
+              "input_index": 1
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2f0#202",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca2fb#208",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca307#215",
+              "input_index": 1
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca30c#78",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca31f#98",
+              "input_index": 0
+            },
+            {
+              "ordinal": 1,
+              "use": "0x1456ca32c#121",
+              "input_index": 0
+            },
+            {
+              "ordinal": 0,
+              "use": "0x1456ca330#124",
+              "input_index": 1
+            },
+            {
+              "ordinal": 0,
+              "use": "0x1456ca333#131",
+              "input_index": 1
+            }
+          ],
+          "effects": [
+            {
+              "operation": "0x1456ca2d3#52",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x1456ca2d7#55",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x1456ca2db#57",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca2df#68",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x1456ca2e1#70",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca2e9#76",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca2f0#203",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca2f7#206",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca2fb#210",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x1456ca307#215",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca30c#79",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca31b#96",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x1456ca31f#99",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca32c#123",
+              "kind": "memory_write",
+              "operand_input": 1,
+              "value_input": 2
+            },
+            {
+              "operation": "0x1456ca330#124",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca333#127",
+              "kind": "memory_read",
+              "operand_input": 1,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca333#131",
+              "kind": "indirect_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca341#144",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x1456ca343#147",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca350#160",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x1456ca352#163",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            },
+            {
+              "operation": "0x1456ca35f#176",
+              "kind": "conditional_branch",
+              "operand_input": null,
+              "value_input": 1
+            },
+            {
+              "operation": "0x1456ca361#179",
+              "kind": "direct_call",
+              "operand_input": 0,
+              "value_input": null
+            }
+          ],
+          "truncated": false,
+          "omitted_operations_lower_bound": 0,
+          "known_omitted_inputs": 0,
+          "known_omitted_edges": 0,
+          "limitations": [
+            "High p-code is decompiler-derived, not original source or runtime behavior. is_dead preserves the Java AST flag; decoded block members can retain that flag, so block_membership separately reports actual syntax-tree membership.",
+            "Def-use links do not cross function boundaries and may omit memory aliasing, call side effects, or unresolved indirect flow.",
+            "Memory read/write effects include stack and temporary memory operations; they do not identify persistent state or business meaning.",
+            "Operation, input, and def-use limits can truncate large functions; inspect truncation, omitted lower bounds, and known omitted counts before drawing conclusions.",
+            "Known omitted-edge counts cover links omitted from retained operations; omitted operations may contain additional uncounted links."
+          ]
+        },
+        "limitations": [
+          "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+          "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+          "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+          "Synthetic Ghidra entry-point references without actionable memory sources are omitted."
+        ]
+      },
+      "limitations": []
+    }
+  }
+}

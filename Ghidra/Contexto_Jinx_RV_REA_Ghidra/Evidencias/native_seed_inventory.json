@@ -1,0 +1,1401 @@
+{
+  "scope": "Targeted PE reflection and native character functions; no default whole-program auto-analysis",
+  "target_sha256": "12b24146b30d550fe47a4179c7b05d1f21b69f058524e0bba4b41397e3e66221",
+  "runtime_function_records": 565264,
+  "candidate_registration_pairs": [
+    {
+      "table_address": "0x148f1c958",
+      "name_pointer": "0x148f1b688",
+      "name": "GetLaneIndexAtLocation",
+      "function_address": "0x1456c2890"
+    },
+    {
+      "table_address": "0x148f1c968",
+      "name_pointer": "0x148f1b7a8",
+      "name": "GetLapCount",
+      "function_address": "0x1456c28f0"
+    },
+    {
+      "table_address": "0x148f1c978",
+      "name_pointer": "0x148ea5ab8",
+      "name": "OnGlobalSignificanceUpdated",
+      "function_address": "0x1456c2920"
+    },
+    {
+      "table_address": "0x148f1c988",
+      "name_pointer": "0x148f1b8f0",
+      "name": "OnRep_LaneNetStates",
+      "function_address": "0x1456c2950"
+    },
+    {
+      "table_address": "0x148f1c998",
+      "name_pointer": "0x148f1b958",
+      "name": "StartEditorSimulation",
+      "function_address": "0x1456c29b0"
+    },
+    {
+      "table_address": "0x148f1d608",
+      "name_pointer": "0x148f1b2e8",
+      "name": "GetCurrentDamageTaken",
+      "function_address": "0x1456c26c0"
+    },
+    {
+      "table_address": "0x148f1d618",
+      "name_pointer": "0x148f1b388",
+      "name": "GetCurrentLookedAtObject",
+      "function_address": "0x1456c26f0"
+    },
+    {
+      "table_address": "0x148f1d628",
+      "name_pointer": "0x148f1b458",
+      "name": "GetCurrentPickedUpActor",
+      "function_address": "0x1456c2720"
+    },
+    {
+      "table_address": "0x148f1d638",
+      "name_pointer": "0x148f1b588",
+      "name": "GetRagdollTransform",
+      "function_address": "0x1456c2830"
+    },
+    {
+      "table_address": "0x148f1d648",
+      "name_pointer": "0x148f1b6a0",
+      "name": "IsDead",
+      "function_address": "0x1456c2860"
+    },
+    {
+      "table_address": "0x148f1d658",
+      "name_pointer": "0x148f1b788",
+      "name": "IsDebugInteractObjectEnabled",
+      "function_address": "0x1456c28c0"
+    },
+    {
+      "table_address": "0x148f1d668",
+      "name_pointer": "0x148f1b8a0",
+      "name": "IsRagdolling",
+      "function_address": "0x1456c2980"
+    },
+    {
+      "table_address": "0x148f1d678",
+      "name_pointer": "0x148f1b970",
+      "name": "K2_OnUniqueIdSet",
+      "function_address": "0x1456c29e0"
+    },
+    {
+      "table_address": "0x148f1d688",
+      "name_pointer": "0x148f1ba10",
+      "name": "OnRep_ReplicatedBoneState",
+      "function_address": "0x1456c2a30"
+    },
+    {
+      "table_address": "0x148f1d698",
+      "name_pointer": "0x148f1c2b8",
+      "name": "ReceiveCustomClientAttach",
+      "function_address": "0x1456c2a70"
+    },
+    {
+      "table_address": "0x148f1d6a8",
+      "name_pointer": "0x148f1c6c8",
+      "name": "ReceiveForceStopJump",
+      "function_address": "0x1456c2aa0"
+    },
+    {
+      "table_address": "0x148f1d6b8",
+      "name_pointer": "0x148f1caf8",
+      "name": "ReceiveGetCurrentDamageTaken",
+      "function_address": "0x1456c2ad0"
+    },
+    {
+      "table_address": "0x148f1d6c8",
+      "name_pointer": "0x148f1ccd0",
+      "name": "ReceiveIsPlayerInRV",
+      "function_address": "0x1456c2b00"
+    },
+    {
+      "table_address": "0x148f1d6d8",
+      "name_pointer": "0x148f1cea8",
+      "name": "ReceiveIsRagdolling",
+      "function_address": "0x1456c2b30"
+    },
+    {
+      "table_address": "0x148f1d6e8",
+      "name_pointer": "0x148f1cef8",
+      "name": "ReceiveResetJumpVelocity",
+      "function_address": "0x1456c2b60"
+    },
+    {
+      "table_address": "0x148f1d6f8",
+      "name_pointer": "0x148f1cf50",
+      "name": "ReceiveResetMaxWalkSpeed",
+      "function_address": "0x1456c2b90"
+    },
+    {
+      "table_address": "0x148f1d708",
+      "name_pointer": "0x148f1d090",
+      "name": "ReceiveSetNewJumpVelocity",
+      "function_address": "0x1456c2bc0"
+    },
+    {
+      "table_address": "0x148f1d718",
+      "name_pointer": "0x148f1d158",
+      "name": "ReceiveSetNewMaxWalkSpeed",
+      "function_address": "0x1456c2bf0"
+    },
+    {
+      "table_address": "0x148f1d728",
+      "name_pointer": "0x148f1d218",
+      "name": "ReceiveSetRagdolled",
+      "function_address": "0x1456c2c20"
+    },
+    {
+      "table_address": "0x148f1d738",
+      "name_pointer": "0x148f1d290",
+      "name": "SetIsPlayerPassenger",
+      "function_address": "0x1456c2c50"
+    },
+    {
+      "table_address": "0x148f1d748",
+      "name_pointer": "0x148f1d308",
+      "name": "SetSwimEnabled",
+      "function_address": "0x1456c2c80"
+    },
+    {
+      "table_address": "0x148f1ea50",
+      "name_pointer": "0x148f1e428",
+      "name": "DumpOverlaps",
+      "function_address": "0x1456c8b20"
+    },
+    {
+      "table_address": "0x148f1ea60",
+      "name_pointer": "0x148f1e4a0",
+      "name": "GiveItem",
+      "function_address": "0x1456c9640"
+    },
+    {
+      "table_address": "0x148f1ea70",
+      "name_pointer": "0x148f1e4f8",
+      "name": "GodPlayers",
+      "function_address": "0x1456c96f0"
+    },
+    {
+      "table_address": "0x148f1ea80",
+      "name_pointer": "0x148f1e558",
+      "name": "GodVehicles",
+      "function_address": "0x1456c9780"
+    },
+    {
+      "table_address": "0x148f1ea90",
+      "name_pointer": "0x148f1e568",
+      "name": "Golf_DumpScorecards",
+      "function_address": "0x1456c9810"
+    },
+    {
+      "table_address": "0x148f1eaa0",
+      "name_pointer": "0x148f1e580",
+      "name": "Golf_FinishCurrentHole",
+      "function_address": "0x1456c9830"
+    },
+    {
+      "table_address": "0x148f1eab0",
+      "name_pointer": "0x148f1e598",
+      "name": "Golf_MoveAllBallsInFront",
+      "function_address": "0x1456c9850"
+    },
+    {
+      "table_address": "0x148f1eac0",
+      "name_pointer": "0x148f18898",
+      "name": "Golf_MoveBallInFront",
+      "function_address": "0x1456c9870"
+    },
+    {
+      "table_address": "0x148f1ead0",
+      "name_pointer": "0x148f188b0",
+      "name": "Golf_NextTurn",
+      "function_address": "0x1456c9890"
+    },
+    {
+      "table_address": "0x148f1eae0",
+      "name_pointer": "0x148f18b30",
+      "name": "Golf_RegisterRound",
+      "function_address": "0x1456c98b0"
+    },
+    {
+      "table_address": "0x148f1eaf0",
+      "name_pointer": "0x148f18b98",
+      "name": "Golf_SetHole",
+      "function_address": "0x1456c9b40"
+    },
+    {
+      "table_address": "0x148f1eb00",
+      "name_pointer": "0x148f18be8",
+      "name": "Golf_TeleportAllToFlag",
+      "function_address": "0x1456c9bd0"
+    },
+    {
+      "table_address": "0x148f1eb10",
+      "name_pointer": "0x148f18c40",
+      "name": "Golf_TeleportAllToGreen",
+      "function_address": "0x1456c9bd0"
+    },
+    {
+      "table_address": "0x148f1eb20",
+      "name_pointer": "0x148f18c98",
+      "name": "Golf_TeleportAllToTee",
+      "function_address": "0x1456c9c60"
+    },
+    {
+      "table_address": "0x148f1eb30",
+      "name_pointer": "0x148f18cf0",
+      "name": "Golf_TeleportToFlag",
+      "function_address": "0x1456c9cf0"
+    },
+    {
+      "table_address": "0x148f1eb40",
+      "name_pointer": "0x148f18d48",
+      "name": "Golf_TeleportToGreen",
+      "function_address": "0x1456c9d80"
+    },
+    {
+      "table_address": "0x148f1eb50",
+      "name_pointer": "0x148f18da0",
+      "name": "Golf_TeleportToTee",
+      "function_address": "0x1456c9e10"
+    },
+    {
+      "table_address": "0x148f1eb60",
+      "name_pointer": "0x148f18db8",
+      "name": "LogPlayerInput",
+      "function_address": "0x1456c9f30"
+    },
+    {
+      "table_address": "0x148f1eb70",
+      "name_pointer": "0x148f18e18",
+      "name": "PSO_AutoCycleSettings",
+      "function_address": "0x1456ca380"
+    },
+    {
+      "table_address": "0x148f1eb80",
+      "name_pointer": "0x148f18e30",
+      "name": "PSO_ListSettings",
+      "function_address": "0x1456ca400"
+    },
+    {
+      "table_address": "0x148f1eb90",
+      "name_pointer": "0x148f18e48",
+      "name": "PSO_NextSettings",
+      "function_address": "0x1456ca420"
+    },
+    {
+      "table_address": "0x148f1eba0",
+      "name_pointer": "0x148f18f58",
+      "name": "PSO_SetSettingsStep",
+      "function_address": "0x1456ca440"
+    },
+    {
+      "table_address": "0x148f1ebb0",
+      "name_pointer": "0x148f19020",
+      "name": "PSO_Spin",
+      "function_address": "0x1456ca4d0"
+    },
+    {
+      "table_address": "0x148f1ebc0",
+      "name_pointer": "0x148f190c8",
+      "name": "PSO_StartRun",
+      "function_address": "0x1456ca5a0"
+    },
+    {
+      "table_address": "0x148f1ebd0",
+      "name_pointer": "0x148f190d8",
+      "name": "PSO_StopRun",
+      "function_address": "0x1456ca670"
+    },
+    {
+      "table_address": "0x148f1ebe0",
+      "name_pointer": "0x148f191e8",
+      "name": "PSO_StopSettings",
+      "function_address": "0x1456ca690"
+    },
+    {
+      "table_address": "0x148f1ebf0",
+      "name_pointer": "0x148f19200",
+      "name": "PSO_StopSpin",
+      "function_address": "0x1456ca6b0"
+    },
+    {
+      "table_address": "0x148f1ec00",
+      "name_pointer": "0x148f19350",
+      "name": "UpdateOnlineSessionState",
+      "function_address": "0x1456ca9c0"
+    },
+    {
+      "table_address": "0x148f1ec10",
+      "name_pointer": "0x148f19550",
+      "name": "UpdatePresence",
+      "function_address": "0x1456ca9e0"
+    },
+    {
+      "table_address": "0x148f1f390",
+      "name_pointer": "0x148f19578",
+      "name": "GetCoconutManager",
+      "function_address": "0x1456c8c90"
+    },
+    {
+      "table_address": "0x148f1f3a0",
+      "name_pointer": "0x1484ef1d0",
+      "name": "RemoveInstance",
+      "function_address": "0x1456ca6d0"
+    },
+    {
+      "table_address": "0x148f1f6f0",
+      "name_pointer": "0x148f1a2e8",
+      "name": "GetAllLevels",
+      "function_address": "0x1456c8b40"
+    },
+    {
+      "table_address": "0x148f1f700",
+      "name_pointer": "0x148f1a3e8",
+      "name": "GetBaseLevels",
+      "function_address": "0x1456c8bf0"
+    },
+    {
+      "table_address": "0x148f1f710",
+      "name_pointer": "0x148f1a438",
+      "name": "GetCurrentEULAVersion",
+      "function_address": "0x1456c8de0"
+    },
+    {
+      "table_address": "0x148f1f720",
+      "name_pointer": "0x148f1a528",
+      "name": "GetLevelData",
+      "function_address": "0x1456c9030"
+    },
+    {
+      "table_address": "0x148f1f730",
+      "name_pointer": "0x148f1a638",
+      "name": "GetLevelDataByMap",
+      "function_address": "0x1456c9190"
+    },
+    {
+      "table_address": "0x148f1f740",
+      "name_pointer": "0x148f1a728",
+      "name": "GetLevelDataByString",
+      "function_address": "0x1456c9340"
+    },
+    {
+      "table_address": "0x148f1f750",
+      "name_pointer": "0x148f1a808",
+      "name": "GetMapName",
+      "function_address": "0x1456c94c0"
+    },
+    {
+      "table_address": "0x148f20250",
+      "name_pointer": "0x148f1b2e8",
+      "name": "GetCurrentDamageTaken",
+      "function_address": "0x1456c8db0"
+    },
+    {
+      "table_address": "0x148f20260",
+      "name_pointer": "0x148f1b588",
+      "name": "GetRagdollTransform",
+      "function_address": "0x1456c95e0"
+    },
+    {
+      "table_address": "0x148f20270",
+      "name_pointer": "0x148f1b788",
+      "name": "IsDebugInteractObjectEnabled",
+      "function_address": "0x1456c9ea0"
+    },
+    {
+      "table_address": "0x148f20280",
+      "name_pointer": "0x148f1b8a0",
+      "name": "IsRagdolling",
+      "function_address": "0x1456c9ed0"
+    },
+    {
+      "table_address": "0x148f20290",
+      "name_pointer": "0x148f1ba10",
+      "name": "OnRep_ReplicatedBoneState",
+      "function_address": "0x1456ca2a0"
+    },
+    {
+      "table_address": "0x148f202a0",
+      "name_pointer": "0x148f1d290",
+      "name": "SetIsPlayerPassenger",
+      "function_address": "0x1456ca7a0"
+    },
+    {
+      "table_address": "0x148f202b0",
+      "name_pointer": "0x148f1d308",
+      "name": "SetSwimEnabled",
+      "function_address": "0x1456ca830"
+    },
+    {
+      "table_address": "0x148f202c0",
+      "name_pointer": "0x148f1d3f0",
+      "name": "TeleportPlayerTo",
+      "function_address": "0x1456ca900"
+    }
+  ],
+  "function_seeds": [
+    {
+      "address": "0x14576b3a0",
+      "unwind_end": "0x14576b3f0",
+      "reasons": [
+        {
+          "kind": "explicit_callee_or_registered_leaf",
+          "unwind_record_covers_entry": true
+        }
+      ],
+      "decode_end_exclusive": "0x14576b3f0"
+    },
+    {
+      "address": "0x1456ca9e0",
+      "unwind_end": "0x1456caa7d",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ec10",
+          "name_pointer": "0x148f19550",
+          "name": "UpdatePresence",
+          "function_address": "0x1456ca9e0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_UpdatePresence",
+      "decode_end_exclusive": "0x1456caa7d"
+    },
+    {
+      "address": "0x1456ca900",
+      "unwind_end": "0x1456ca9ba",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f202c0",
+          "name_pointer": "0x148f1d3f0",
+          "name": "TeleportPlayerTo",
+          "function_address": "0x1456ca900"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_TeleportPlayerTo",
+      "decode_end_exclusive": "0x1456ca9ba"
+    },
+    {
+      "address": "0x1456ca830",
+      "unwind_end": "0x1456ca8b7",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f202b0",
+          "name_pointer": "0x148f1d308",
+          "name": "SetSwimEnabled",
+          "function_address": "0x1456ca830"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_SetSwimEnabled",
+      "decode_end_exclusive": "0x1456ca8b7"
+    },
+    {
+      "address": "0x1456ca7a0",
+      "unwind_end": "0x1456ca827",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f202a0",
+          "name_pointer": "0x148f1d290",
+          "name": "SetIsPlayerPassenger",
+          "function_address": "0x1456ca7a0"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_SetIsPlayerPassenger",
+      "decode_end_exclusive": "0x1456ca827"
+    },
+    {
+      "address": "0x1456ca6d0",
+      "unwind_end": "0x1456ca798",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f3a0",
+          "name_pointer": "0x1484ef1d0",
+          "name": "RemoveInstance",
+          "function_address": "0x1456ca6d0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_RemoveInstance",
+      "decode_end_exclusive": "0x1456ca798"
+    },
+    {
+      "address": "0x1456ca5a0",
+      "unwind_end": "0x1456ca66d",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ebc0",
+          "name_pointer": "0x148f190c8",
+          "name": "PSO_StartRun",
+          "function_address": "0x1456ca5a0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_PSO_StartRun",
+      "decode_end_exclusive": "0x1456ca66d"
+    },
+    {
+      "address": "0x1456ca4d0",
+      "unwind_end": "0x1456ca598",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ebb0",
+          "name_pointer": "0x148f19020",
+          "name": "PSO_Spin",
+          "function_address": "0x1456ca4d0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_PSO_Spin",
+      "decode_end_exclusive": "0x1456ca598"
+    },
+    {
+      "address": "0x1456ca440",
+      "unwind_end": "0x1456ca4c3",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eba0",
+          "name_pointer": "0x148f18f58",
+          "name": "PSO_SetSettingsStep",
+          "function_address": "0x1456ca440"
+        }
+      ],
+      "candidate_name": "Candidate_registration_PSO_SetSettingsStep",
+      "decode_end_exclusive": "0x1456ca4c3"
+    },
+    {
+      "address": "0x1456ca380",
+      "unwind_end": "0x1456ca3ff",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb70",
+          "name_pointer": "0x148f18e18",
+          "name": "PSO_AutoCycleSettings",
+          "function_address": "0x1456ca380"
+        }
+      ],
+      "candidate_name": "Candidate_registration_PSO_AutoCycleSettings",
+      "decode_end_exclusive": "0x1456ca3ff"
+    },
+    {
+      "address": "0x1456ca2a0",
+      "unwind_end": "0x1456ca376",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f20290",
+          "name_pointer": "0x148f1ba10",
+          "name": "OnRep_ReplicatedBoneState",
+          "function_address": "0x1456ca2a0"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_OnRep_ReplicatedBoneState",
+      "decode_end_exclusive": "0x1456ca376"
+    },
+    {
+      "address": "0x1456c9ed0",
+      "unwind_end": "0x1456c9f30",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f20280",
+          "name_pointer": "0x148f1b8a0",
+          "name": "IsRagdolling",
+          "function_address": "0x1456c9ed0"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_IsRagdolling",
+      "decode_end_exclusive": "0x1456c9f30"
+    },
+    {
+      "address": "0x1456c9ea0",
+      "unwind_end": "0x1456c9ec9",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f20270",
+          "name_pointer": "0x148f1b788",
+          "name": "IsDebugInteractObjectEnabled",
+          "function_address": "0x1456c9ea0"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_IsDebugInteractObjectEnabled",
+      "decode_end_exclusive": "0x1456c9ec9"
+    },
+    {
+      "address": "0x1456c9e10",
+      "unwind_end": "0x1456c9e93",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb50",
+          "name_pointer": "0x148f18da0",
+          "name": "Golf_TeleportToTee",
+          "function_address": "0x1456c9e10"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_TeleportToTee",
+      "decode_end_exclusive": "0x1456c9e93"
+    },
+    {
+      "address": "0x1456c9d80",
+      "unwind_end": "0x1456c9e03",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb40",
+          "name_pointer": "0x148f18d48",
+          "name": "Golf_TeleportToGreen",
+          "function_address": "0x1456c9d80"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_TeleportToGreen",
+      "decode_end_exclusive": "0x1456c9e03"
+    },
+    {
+      "address": "0x1456c9cf0",
+      "unwind_end": "0x1456c9d73",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb30",
+          "name_pointer": "0x148f18cf0",
+          "name": "Golf_TeleportToFlag",
+          "function_address": "0x1456c9cf0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_TeleportToFlag",
+      "decode_end_exclusive": "0x1456c9d73"
+    },
+    {
+      "address": "0x1456c9c60",
+      "unwind_end": "0x1456c9ce3",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb20",
+          "name_pointer": "0x148f18c98",
+          "name": "Golf_TeleportAllToTee",
+          "function_address": "0x1456c9c60"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_TeleportAllToTee",
+      "decode_end_exclusive": "0x1456c9ce3"
+    },
+    {
+      "address": "0x1456c9bd0",
+      "unwind_end": "0x1456c9c53",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb00",
+          "name_pointer": "0x148f18be8",
+          "name": "Golf_TeleportAllToFlag",
+          "function_address": "0x1456c9bd0"
+        },
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eb10",
+          "name_pointer": "0x148f18c40",
+          "name": "Golf_TeleportAllToGreen",
+          "function_address": "0x1456c9bd0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_TeleportAllToGreen",
+      "decode_end_exclusive": "0x1456c9c53"
+    },
+    {
+      "address": "0x1456c9b40",
+      "unwind_end": "0x1456c9bc3",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eaf0",
+          "name_pointer": "0x148f18b98",
+          "name": "Golf_SetHole",
+          "function_address": "0x1456c9b40"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_SetHole",
+      "decode_end_exclusive": "0x1456c9bc3"
+    },
+    {
+      "address": "0x1456c98b0",
+      "unwind_end": "0x1456c9b39",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1eae0",
+          "name_pointer": "0x148f18b30",
+          "name": "Golf_RegisterRound",
+          "function_address": "0x1456c98b0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_Golf_RegisterRound",
+      "decode_end_exclusive": "0x1456c9b39"
+    },
+    {
+      "address": "0x1456c9780",
+      "unwind_end": "0x1456c980b",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ea80",
+          "name_pointer": "0x148f1e558",
+          "name": "GodVehicles",
+          "function_address": "0x1456c9780"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GodVehicles",
+      "decode_end_exclusive": "0x1456c980b"
+    },
+    {
+      "address": "0x1456c96f0",
+      "unwind_end": "0x1456c977b",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ea70",
+          "name_pointer": "0x148f1e4f8",
+          "name": "GodPlayers",
+          "function_address": "0x1456c96f0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GodPlayers",
+      "decode_end_exclusive": "0x1456c977b"
+    },
+    {
+      "address": "0x1456c9640",
+      "unwind_end": "0x1456c96e2",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1ea60",
+          "name_pointer": "0x148f1e4a0",
+          "name": "GiveItem",
+          "function_address": "0x1456c9640"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GiveItem",
+      "decode_end_exclusive": "0x1456c96e2"
+    },
+    {
+      "address": "0x1456c95e0",
+      "unwind_end": "0x1456c9640",
+      "reasons": [
+        {
+          "kind": "explicit_callee_or_registered_leaf",
+          "unwind_record_covers_entry": false
+        }
+      ],
+      "decode_end_exclusive": "0x1456c9640",
+      "candidate_name": "RGFPC_exec_GetRagdollTransform"
+    },
+    {
+      "address": "0x1456c94c0",
+      "unwind_end": "0x1456c95d1",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f750",
+          "name_pointer": "0x148f1a808",
+          "name": "GetMapName",
+          "function_address": "0x1456c94c0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetMapName",
+      "decode_end_exclusive": "0x1456c95d1"
+    },
+    {
+      "address": "0x1456c9340",
+      "unwind_end": "0x1456c94ba",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f740",
+          "name_pointer": "0x148f1a728",
+          "name": "GetLevelDataByString",
+          "function_address": "0x1456c9340"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetLevelDataByString",
+      "decode_end_exclusive": "0x1456c94ba"
+    },
+    {
+      "address": "0x1456c9190",
+      "unwind_end": "0x1456c933a",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f730",
+          "name_pointer": "0x148f1a638",
+          "name": "GetLevelDataByMap",
+          "function_address": "0x1456c9190"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetLevelDataByMap",
+      "decode_end_exclusive": "0x1456c933a"
+    },
+    {
+      "address": "0x1456c9030",
+      "unwind_end": "0x1456c918a",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f720",
+          "name_pointer": "0x148f1a528",
+          "name": "GetLevelData",
+          "function_address": "0x1456c9030"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetLevelData",
+      "decode_end_exclusive": "0x1456c918a"
+    },
+    {
+      "address": "0x1456c8de0",
+      "unwind_end": "0x1456c8e09",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f710",
+          "name_pointer": "0x148f1a438",
+          "name": "GetCurrentEULAVersion",
+          "function_address": "0x1456c8de0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetCurrentEULAVersion",
+      "decode_end_exclusive": "0x1456c8e09"
+    },
+    {
+      "address": "0x1456c8db0",
+      "unwind_end": "0x1456c8ddb",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f20250",
+          "name_pointer": "0x148f1b2e8",
+          "name": "GetCurrentDamageTaken",
+          "function_address": "0x1456c8db0"
+        }
+      ],
+      "candidate_name": "RGFPC_exec_GetCurrentDamageTaken",
+      "decode_end_exclusive": "0x1456c8ddb"
+    },
+    {
+      "address": "0x1456c8c90",
+      "unwind_end": "0x1456c8da3",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f390",
+          "name_pointer": "0x148f19578",
+          "name": "GetCoconutManager",
+          "function_address": "0x1456c8c90"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetCoconutManager",
+      "decode_end_exclusive": "0x1456c8da3"
+    },
+    {
+      "address": "0x1456c8bf0",
+      "unwind_end": "0x1456c8c83",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f700",
+          "name_pointer": "0x148f1a3e8",
+          "name": "GetBaseLevels",
+          "function_address": "0x1456c8bf0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetBaseLevels",
+      "decode_end_exclusive": "0x1456c8c83"
+    },
+    {
+      "address": "0x1456c8b40",
+      "unwind_end": "0x1456c8b73",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1f6f0",
+          "name_pointer": "0x148f1a2e8",
+          "name": "GetAllLevels",
+          "function_address": "0x1456c8b40"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetAllLevels",
+      "decode_end_exclusive": "0x1456c8b73"
+    },
+    {
+      "address": "0x1456c8720",
+      "unwind_end": "0x1456c8742",
+      "reasons": [
+        {
+          "kind": "candidate_rip_reference",
+          "source": "0x1456c872f",
+          "target": "0x148f1f6f0"
+        }
+      ],
+      "decode_end_exclusive": "0x1456c8742"
+    },
+    {
+      "address": "0x1456c86f0",
+      "unwind_end": "0x1456c8712",
+      "reasons": [
+        {
+          "kind": "candidate_rip_reference",
+          "source": "0x1456c86ff",
+          "target": "0x148f1ea50"
+        }
+      ],
+      "decode_end_exclusive": "0x1456c8712"
+    },
+    {
+      "address": "0x1456c8690",
+      "unwind_end": "0x1456c86b2",
+      "reasons": [
+        {
+          "kind": "candidate_rip_reference",
+          "source": "0x1456c869f",
+          "target": "0x148f20250"
+        }
+      ],
+      "decode_end_exclusive": "0x1456c86b2"
+    },
+    {
+      "address": "0x1456c8660",
+      "unwind_end": "0x1456c8682",
+      "reasons": [
+        {
+          "kind": "candidate_rip_reference",
+          "source": "0x1456c866f",
+          "target": "0x148f1f390"
+        }
+      ],
+      "decode_end_exclusive": "0x1456c8682"
+    },
+    {
+      "address": "0x1456c5c20",
+      "unwind_end": "0x1456c5c50",
+      "reasons": [
+        {
+          "kind": "explicit_callee_or_registered_leaf",
+          "unwind_record_covers_entry": false
+        }
+      ],
+      "decode_end_exclusive": "0x1456c5c50"
+    },
+    {
+      "address": "0x1456c2c80",
+      "unwind_end": "0x1456c2caf",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d748",
+          "name_pointer": "0x148f1d308",
+          "name": "SetSwimEnabled",
+          "function_address": "0x1456c2c80"
+        }
+      ],
+      "candidate_name": "Candidate_registration_SetSwimEnabled",
+      "decode_end_exclusive": "0x1456c2caf"
+    },
+    {
+      "address": "0x1456c2c50",
+      "unwind_end": "0x1456c2c7f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d738",
+          "name_pointer": "0x148f1d290",
+          "name": "SetIsPlayerPassenger",
+          "function_address": "0x1456c2c50"
+        }
+      ],
+      "candidate_name": "Candidate_registration_SetIsPlayerPassenger",
+      "decode_end_exclusive": "0x1456c2c7f"
+    },
+    {
+      "address": "0x1456c2c20",
+      "unwind_end": "0x1456c2c4f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d728",
+          "name_pointer": "0x148f1d218",
+          "name": "ReceiveSetRagdolled",
+          "function_address": "0x1456c2c20"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveSetRagdolled",
+      "decode_end_exclusive": "0x1456c2c4f"
+    },
+    {
+      "address": "0x1456c2bf0",
+      "unwind_end": "0x1456c2c1f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d718",
+          "name_pointer": "0x148f1d158",
+          "name": "ReceiveSetNewMaxWalkSpeed",
+          "function_address": "0x1456c2bf0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveSetNewMaxWalkSpeed",
+      "decode_end_exclusive": "0x1456c2c1f"
+    },
+    {
+      "address": "0x1456c2bc0",
+      "unwind_end": "0x1456c2bef",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d708",
+          "name_pointer": "0x148f1d090",
+          "name": "ReceiveSetNewJumpVelocity",
+          "function_address": "0x1456c2bc0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveSetNewJumpVelocity",
+      "decode_end_exclusive": "0x1456c2bef"
+    },
+    {
+      "address": "0x1456c2b90",
+      "unwind_end": "0x1456c2bbf",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6f8",
+          "name_pointer": "0x148f1cf50",
+          "name": "ReceiveResetMaxWalkSpeed",
+          "function_address": "0x1456c2b90"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveResetMaxWalkSpeed",
+      "decode_end_exclusive": "0x1456c2bbf"
+    },
+    {
+      "address": "0x1456c2b60",
+      "unwind_end": "0x1456c2b8f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6e8",
+          "name_pointer": "0x148f1cef8",
+          "name": "ReceiveResetJumpVelocity",
+          "function_address": "0x1456c2b60"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveResetJumpVelocity",
+      "decode_end_exclusive": "0x1456c2b8f"
+    },
+    {
+      "address": "0x1456c2b30",
+      "unwind_end": "0x1456c2b5f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6d8",
+          "name_pointer": "0x148f1cea8",
+          "name": "ReceiveIsRagdolling",
+          "function_address": "0x1456c2b30"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveIsRagdolling",
+      "decode_end_exclusive": "0x1456c2b5f"
+    },
+    {
+      "address": "0x1456c2b00",
+      "unwind_end": "0x1456c2b2f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6c8",
+          "name_pointer": "0x148f1ccd0",
+          "name": "ReceiveIsPlayerInRV",
+          "function_address": "0x1456c2b00"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveIsPlayerInRV",
+      "decode_end_exclusive": "0x1456c2b2f"
+    },
+    {
+      "address": "0x1456c2ad0",
+      "unwind_end": "0x1456c2aff",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6b8",
+          "name_pointer": "0x148f1caf8",
+          "name": "ReceiveGetCurrentDamageTaken",
+          "function_address": "0x1456c2ad0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveGetCurrentDamageTaken",
+      "decode_end_exclusive": "0x1456c2aff"
+    },
+    {
+      "address": "0x1456c2aa0",
+      "unwind_end": "0x1456c2acf",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d6a8",
+          "name_pointer": "0x148f1c6c8",
+          "name": "ReceiveForceStopJump",
+          "function_address": "0x1456c2aa0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveForceStopJump",
+      "decode_end_exclusive": "0x1456c2acf"
+    },
+    {
+      "address": "0x1456c2a70",
+      "unwind_end": "0x1456c2a9f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d698",
+          "name_pointer": "0x148f1c2b8",
+          "name": "ReceiveCustomClientAttach",
+          "function_address": "0x1456c2a70"
+        }
+      ],
+      "candidate_name": "Candidate_registration_ReceiveCustomClientAttach",
+      "decode_end_exclusive": "0x1456c2a9f"
+    },
+    {
+      "address": "0x1456c2a30",
+      "unwind_end": "0x1456c2a5f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d688",
+          "name_pointer": "0x148f1ba10",
+          "name": "OnRep_ReplicatedBoneState",
+          "function_address": "0x1456c2a30"
+        }
+      ],
+      "candidate_name": "Candidate_registration_OnRep_ReplicatedBoneState",
+      "decode_end_exclusive": "0x1456c2a5f"
+    },
+    {
+      "address": "0x1456c29e0",
+      "unwind_end": "0x1456c2a0f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d678",
+          "name_pointer": "0x148f1b970",
+          "name": "K2_OnUniqueIdSet",
+          "function_address": "0x1456c29e0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_K2_OnUniqueIdSet",
+      "decode_end_exclusive": "0x1456c2a0f"
+    },
+    {
+      "address": "0x1456c29b0",
+      "unwind_end": "0x1456c29df",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1c998",
+          "name_pointer": "0x148f1b958",
+          "name": "StartEditorSimulation",
+          "function_address": "0x1456c29b0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_StartEditorSimulation",
+      "decode_end_exclusive": "0x1456c29df"
+    },
+    {
+      "address": "0x1456c2980",
+      "unwind_end": "0x1456c29af",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d668",
+          "name_pointer": "0x148f1b8a0",
+          "name": "IsRagdolling",
+          "function_address": "0x1456c2980"
+        }
+      ],
+      "candidate_name": "Candidate_registration_IsRagdolling",
+      "decode_end_exclusive": "0x1456c29af"
+    },
+    {
+      "address": "0x1456c2950",
+      "unwind_end": "0x1456c297f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1c988",
+          "name_pointer": "0x148f1b8f0",
+          "name": "OnRep_LaneNetStates",
+          "function_address": "0x1456c2950"
+        }
+      ],
+      "candidate_name": "Candidate_registration_OnRep_LaneNetStates",
+      "decode_end_exclusive": "0x1456c297f"
+    },
+    {
+      "address": "0x1456c2920",
+      "unwind_end": "0x1456c294f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1c978",
+          "name_pointer": "0x148ea5ab8",
+          "name": "OnGlobalSignificanceUpdated",
+          "function_address": "0x1456c2920"
+        }
+      ],
+      "candidate_name": "Candidate_registration_OnGlobalSignificanceUpdated",
+      "decode_end_exclusive": "0x1456c294f"
+    },
+    {
+      "address": "0x1456c28f0",
+      "unwind_end": "0x1456c291f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1c968",
+          "name_pointer": "0x148f1b7a8",
+          "name": "GetLapCount",
+          "function_address": "0x1456c28f0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetLapCount",
+      "decode_end_exclusive": "0x1456c291f"
+    },
+    {
+      "address": "0x1456c28c0",
+      "unwind_end": "0x1456c28ef",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d658",
+          "name_pointer": "0x148f1b788",
+          "name": "IsDebugInteractObjectEnabled",
+          "function_address": "0x1456c28c0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_IsDebugInteractObjectEnabled",
+      "decode_end_exclusive": "0x1456c28ef"
+    },
+    {
+      "address": "0x1456c2890",
+      "unwind_end": "0x1456c28bf",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1c958",
+          "name_pointer": "0x148f1b688",
+          "name": "GetLaneIndexAtLocation",
+          "function_address": "0x1456c2890"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetLaneIndexAtLocation",
+      "decode_end_exclusive": "0x1456c28bf"
+    },
+    {
+      "address": "0x1456c2860",
+      "unwind_end": "0x1456c288f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d648",
+          "name_pointer": "0x148f1b6a0",
+          "name": "IsDead",
+          "function_address": "0x1456c2860"
+        }
+      ],
+      "candidate_name": "Candidate_registration_IsDead",
+      "decode_end_exclusive": "0x1456c288f"
+    },
+    {
+      "address": "0x1456c2830",
+      "unwind_end": "0x1456c285f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d638",
+          "name_pointer": "0x148f1b588",
+          "name": "GetRagdollTransform",
+          "function_address": "0x1456c2830"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetRagdollTransform",
+      "decode_end_exclusive": "0x1456c285f"
+    },
+    {
+      "address": "0x1456c2720",
+      "unwind_end": "0x1456c274f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d628",
+          "name_pointer": "0x148f1b458",
+          "name": "GetCurrentPickedUpActor",
+          "function_address": "0x1456c2720"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetCurrentPickedUpActor",
+      "decode_end_exclusive": "0x1456c274f"
+    },
+    {
+      "address": "0x1456c26f0",
+      "unwind_end": "0x1456c271f",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d618",
+          "name_pointer": "0x148f1b388",
+          "name": "GetCurrentLookedAtObject",
+          "function_address": "0x1456c26f0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetCurrentLookedAtObject",
+      "decode_end_exclusive": "0x1456c271f"
+    },
+    {
+      "address": "0x1456c26c0",
+      "unwind_end": "0x1456c26ef",
+      "reasons": [
+        {
+          "kind": "candidate_native_registration_pair",
+          "table_address": "0x148f1d608",
+          "name_pointer": "0x148f1b2e8",
+          "name": "GetCurrentDamageTaken",
+          "function_address": "0x1456c26c0"
+        }
+      ],
+      "candidate_name": "Candidate_registration_GetCurrentDamageTaken",
+      "decode_end_exclusive": "0x1456c26ef"
+    },
+    {
+      "address": "0x1456c2250",
+      "unwind_end": "0x1456c22fe",
+      "reasons": [
+        {
+          "kind": "candidate_rip_reference",
+          "source": "0x1456c2296",
+          "target": "0x148f202d0"
+        }
+      ],
+      "decode_end_exclusive": "0x1456c22fe"
+    }
+  ],
+  "limitations": [
+    "Name/pointer adjacency and raw RIP-pattern matches are candidates until confirmed by decoded instructions and registration code.",
+    "No game execution or Blueprint bytecode interpretation."
+  ]
+}
